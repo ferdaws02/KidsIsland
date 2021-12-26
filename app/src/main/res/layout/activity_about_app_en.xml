@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F1F6FA"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:weightSum="6"
+    app:circularflow_radiusInDP="20dp"
+    tools:context=".aboutAppEn">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="10dp"
+            android:shadowRadius="20"
+            android:text="About App"
+            android:textColor="@color/black"
+            android:textSize="40sp"
+            />
+
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/viewPage"
+            android:layout_width="450dp"
+            android:layout_height="150dp"
+            android:background="@drawable/background_border"
+
+            android:orientation="horizontal"
+            android:layout_gravity="center"/>
+
+        <FrameLayout
+            android:id="@+id/frameLayout2"
+            android:layout_width="260dp"
+            android:layout_height="91dp"
+            android:layout_gravity="center"
+            >
+
+            <ImageButton
+
+                android:id="@+id/btnContinu"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:background="@null"
+                android:scaleType="fitXY"
+                android:src="@drawable/bgbutton"></ImageButton>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:clickable="false"
+                android:text="@string/text_button_continue"
+                android:textColor="@color/white"
+                android:textSize="24sp"></TextView>
+        </FrameLayout>
+
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

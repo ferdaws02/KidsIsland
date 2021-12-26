@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".age">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Chose a level"
+            android:textColor="@color/black"
+            android:textSize="30sp"
+          />
+
+
+        <FrameLayout
+            android:id="@+id/frameLayout5"
+            android:layout_width="260dp"
+            android:layout_height="91dp"
+            android:layout_gravity="center">
+
+            <ImageButton
+                android:id="@+id/EasyEn"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:background="@null"
+                android:scaleType="fitXY"
+                android:src="@drawable/bgbuttongrey">
+
+            </ImageButton>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="20dp"
+                android:clickable="false"
+                android:gravity="center"
+                android:text="@string/text_button_level_easy"
+                android:textColor="@color/black"
+                android:textSize="24sp">
+
+            </TextView>
+
+            <TextView
+                android:layout_width="259dp"
+                android:layout_height="40dp"
+                android:layout_gravity="bottom|center_horizontal|end"
+                android:layout_marginBottom="10dp"
+                android:clickable="false"
+                android:gravity="center"
+                android:text="@string/text_button_age3to5"
+                android:textColor="#707070"
+                android:textSize="15sp">
+
+            </TextView>
+
+
+        </FrameLayout>
+
+
+        <FrameLayout
+            android:id="@+id/frameLayout7"
+            android:layout_width="260dp"
+            android:layout_height="91dp"
+            android:layout_gravity="center">
+
+            <ImageButton
+                android:id="@+id/MediumEn"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:background="@null"
+                android:scaleType="fitXY"
+                android:src="@drawable/bgbuttongrey">
+
+            </ImageButton>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="20dp"
+                android:clickable="false"
+                android:gravity="center"
+                android:text="@string/text_button_level_medium"
+                android:textColor="@color/black"
+                android:textSize="24sp">
+
+            </TextView>
+
+            <TextView
+                android:layout_width="259dp"
+                android:layout_height="40dp"
+                android:layout_gravity="bottom|center_horizontal|end"
+                android:layout_marginBottom="10dp"
+                android:clickable="false"
+                android:gravity="center"
+                android:text="@string/text_button_age6to7"
+                android:textColor="#707070"
+                android:textSize="15sp">
+
+            </TextView>
+        </FrameLayout>
+
+
+        <FrameLayout
+            android:id="@+id/frameLayout6"
+            android:layout_width="260dp"
+            android:layout_height="91dp"
+            android:layout_gravity="center">
+
+            <ImageButton
+                android:id="@+id/HardEn"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:background="@null"
+                android:scaleType="fitXY"
+                android:src="@drawable/bgbuttongrey">
+
+            </ImageButton>
+
+            <TextView
+                android:layout_width="252dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:clickable="false"
+                android:gravity="center"
+                android:text="@string/text_button_level_hard"
+                android:textColor="@color/black"
+                android:textSize="24sp">
+
+            </TextView>
+
+            <TextView
+                android:layout_width="259dp"
+                android:layout_height="40dp"
+                android:layout_gravity="bottom|center_horizontal|end"
+                android:layout_marginBottom="10dp"
+                android:clickable="false"
+                android:gravity="center"
+                android:text="@string/text_button_age8to10"
+                android:textColor="#707070"
+                android:textSize="15sp">
+
+            </TextView>
+        </FrameLayout>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

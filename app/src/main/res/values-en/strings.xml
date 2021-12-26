@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">KidsIsland</string>
+    <string name="chose_level">chose a level </string>
+    <string name="text_button_continue">Continue</string>
+    <!--    level english-->
+    <string name="text_button_level_easy">Easy</string>
+    <string name="text_button_level_medium">Medium</string>
+    <string name="text_button_level_hard">Hard</string>
+    <string name="text_button_age3to5">From 3 to 5 years</string>
+    <string name="text_button_age6to7">From 6 to 7 years</string>
+    <string name="text_button_age8to10">From 8 to 10 years</string>
+</resources>

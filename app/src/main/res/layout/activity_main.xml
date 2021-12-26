@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    tools:context=".MainActivity">
+
+
+    <FrameLayout
+        android:layout_height="91dp"
+        android:layout_width="260dp">
+        <ImageButton
+            android:id="@+id/EnglishBtn"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="@null"
+            android:scaleType="fitXY"
+            android:src="@drawable/bgbutton" >
+        </ImageButton>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:clickable="false"
+            android:text="English"
+            android:textColor="@color/white"
+            android:textSize="24sp">
+        </TextView>
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_height="91dp"
+        android:layout_width="260dp">
+        <ImageButton
+            android:id="@+id/françaisBtn"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="@null"
+            android:scaleType="fitXY"
+            android:src="@drawable/bgbutton" >
+        </ImageButton>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:clickable="false"
+            android:text="Français"
+            android:textColor="@color/white"
+            android:textSize="24sp">
+        </TextView>
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_height="91dp"
+        android:layout_width="260dp">
+        <ImageButton
+            android:id="@+id/ArabicBtn"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="@null"
+            android:scaleType="fitXY"
+            android:src="@drawable/bgbutton" >
+        </ImageButton>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:clickable="false"
+            android:text="عربية"
+            android:textColor="@color/white"
+            android:textSize="24sp">
+        </TextView>
+    </FrameLayout>
+</androidx.appcompat.widget.LinearLayoutCompat>
+
+

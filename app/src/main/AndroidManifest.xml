@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.kidsislandv1">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.KidsIslandV1">
+        <activity
+            android:name=".LoginActivity"
+            android:exported="false"
+            android:screenOrientation="landscape"
+            />
+        <activity
+            android:name=".levels.easygames.memorygame.MemoryLevel"
+            android:exported="false" />
+        <activity
+            android:name=".levels.easygames.Database_easygames"
+            android:exported="true"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".levels.easygames.memorygame.MemoryMainActivity"
+            android:exported="true"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".levels.easygames.puzzelgame.puzzelActivity"
+            android:exported="true"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".levels.easygames.puzzelgame.MainpuzzelActivity"
+            android:exported="true"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".levels.easygames.Easygames"
+            android:exported="true"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".levels.easygames.play"
+            android:exported="true"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".age"
+            android:exported="true"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".aboutAppEn"
+            android:exported="true"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".SplashScreenActivity"
+            android:exported="true"
+            android:screenOrientation="landscape">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:screenOrientation="landscape">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

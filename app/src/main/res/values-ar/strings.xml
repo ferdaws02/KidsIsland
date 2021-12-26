@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">KidsIsland</string>
+    <!--    al3onwen arab-->
+    <string name="chose_level">إختر مستوى </string>
+    <string name="text_button_continue">استمر</string>
+    <!--    les niveaux arabe-->
+    <string name="text_button_level_easy">سهل</string>
+    <string name="text_button_level_medium">متوسط</string>
+    <string name="text_button_level_hard">صعب</string>
+    <string name="text_button_age3to5">من 3 إلى 5 سنوات</string>
+    <string name="text_button_age6to7">من 6 إلى 7 سنوات</string>
+    <string name="text_button_age8to10">من 8 إلى 10 سنوات</string>
+</resources>

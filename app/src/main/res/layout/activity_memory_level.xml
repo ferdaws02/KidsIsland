@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".levels.easygames.memorygame.MemoryLevel">
+
+    <TextView
+        android:id="@+id/idtextplayer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="idplayer"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toStartOf="@+id/idtextscore"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/idtextscore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="score"
+        android:textSize="30sp"
+        android:layout_margin="10dp"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="181dp"
+        android:layout_height="65dp"
+        android:gravity="center"
+        android:text="Levels"
+        android:textSize="60sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/gridLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <GridLayout
+        android:id="@+id/gridLayout"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="150dp"
+        android:columnCount="4"
+        android:rowCount="6"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+
+        app:layout_constraintStart_toStartOf="parent"
+
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <FrameLayout>
+
+            <ImageView
+                android:id="@+id/idlevelopen1"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+
+
+                android:src="@drawable/level_image" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="1"
+                android:textSize="50sp" />
+
+        </FrameLayout>
+
+
+        <ImageView
+
+            android:id="@+id/idlevelclose2"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+
+            android:src="@drawable/level_image_close" />
+
+        <ImageView
+            android:id="@+id/idlevelclose3"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/level_image_close" />
+
+        <ImageView
+            android:id="@+id/idlevelclose4"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/level_image_close" />
+
+        <ImageView
+            android:id="@+id/idlevelclose5"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/level_image_close" />
+
+        <ImageView
+            android:id="@+id/idlevelclose6"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/level_image_close" />
+
+        <ImageView
+            android:id="@+id/idlevelclose7"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/level_image_close" />
+
+        <ImageView
+            android:id="@+id/idlevelclose8"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/level_image_close" />
+
+        <ImageView
+            android:id="@+id/idlevelclose9"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/level_image_close" />
+
+        <ImageView
+            android:id="@+id/idlevelclose10"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/level_image_close" />
+
+        <ImageView
+            android:id="@+id/idlevelclose11"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/level_image_close" />
+
+        <ImageView
+            android:id="@+id/idlevelclose12"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/level_image_close" />
+
+
+        <ImageView
+            android:id="@+id/idlevelclose13"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/level_image_close" />
+
+        <ImageView
+            android:id="@+id/idlevelclose14"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/level_image_close" />
+
+
+        <ImageView
+            android:id="@+id/idlevelclose15"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/level_image_close" />
+
+
+        <ImageView
+            android:id="@+id/idlevelclose16"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/level_image_close" />
+
+
+        <ImageView
+            android:id="@+id/idlevelclose17"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/level_image_close" />
+
+        <ImageView
+            android:id="@+id/idlevelclose18"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/level_image_close" />
+
+        <ImageView
+            android:id="@+id/idlevelclose19"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/level_image_close" />
+
+        <ImageView
+            android:id="@+id/idlevelclose20"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/level_image_close" />
+
+        <ImageView
+            android:id="@+id/idlevelclose21"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/level_image_close" />
+
+        <ImageView
+            android:id="@+id/idlevelclose22"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/level_image_close" />
+
+        <ImageView
+            android:id="@+id/idlevelclose23"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/level_image_close" />
+
+        <ImageView
+            android:id="@+id/idlevelclose24"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/level_image_close" />
+
+
+    </GridLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+

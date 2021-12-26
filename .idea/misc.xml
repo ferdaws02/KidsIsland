@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/25 881 610/Desktop/miniprojet/kidsIslandV1/app/src/main/res/layout/activity_about_app_en.xml" value="0.1" />
+        <entry key="..\:/Users/25 881 610/Desktop/miniprojet/kidsIslandV1/app/src/main/res/layout/activity_age.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/25 881 610/Desktop/miniprojet/kidsIslandV1/app/src/main/res/layout/activity_database.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/25 881 610/Desktop/miniprojet/kidsIslandV1/app/src/main/res/layout/activity_database_easygames.xml" value="0.1" />
+        <entry key="..\:/Users/25 881 610/Desktop/miniprojet/kidsIslandV1/app/src/main/res/layout/activity_easygames.xml" value="0.1" />
+        <entry key="..\:/Users/25 881 610/Desktop/miniprojet/kidsIslandV1/app/src/main/res/layout/activity_main.xml" value="0.2" />
+        <entry key="..\:/Users/25 881 610/Desktop/miniprojet/kidsIslandV1/app/src/main/res/layout/activity_mainpuzzel.xml" value="0.15" />
+        <entry key="..\:/Users/25 881 610/Desktop/miniprojet/kidsIslandV1/app/src/main/res/layout/activity_memory_main.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/25 881 610/Desktop/miniprojet/kidsIslandV1/app/src/main/res/layout/activity_play.xml" value="0.18" />
+        <entry key="..\:/Users/25 881 610/Desktop/miniprojet/kidsIslandV1/app/src/main/res/layout/activity_puzzel.xml" value="0.1" />
+        <entry key="..\:/Users/25 881 610/Desktop/miniprojet/kidsIslandV1/app/src/main/res/layout/activity_splash_screen.xml" value="0.1" />
+        <entry key="..\:/Users/25 881 610/Desktop/miniprojet/kidsIslandV1/app/src/main/res/layout/coming soon_dialog.xml" value="0.108203125" />
+        <entry key="..\:/Users/25 881 610/Desktop/miniprojet/kidsIslandV1/app/src/main/res/layout/coming_soon_dialog.xml" value="0.25" />
+        <entry key="..\:/Users/25 881 610/Desktop/miniprojet/kidsIslandV1/app/src/main/res/layout/lose_layout_dialog_easygames.xml" value="0.1" />
+        <entry key="..\:/Users/25 881 610/Desktop/miniprojet/kidsIslandV1/app/src/main/res/layout/menu_memory.xml" value="0.16" />
+        <entry key="..\:/Users/25 881 610/Desktop/miniprojet/kidsIslandV1/app/src/main/res/layout/player_item_easygames.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/25 881 610/Desktop/miniprojet/kidsIslandV1/app/src/main/res/layout/test.xml" value="0.25" />
+        <entry key="..\:/Users/25 881 610/Desktop/miniprojet/kidsIslandV1/app/src/main/res/layout/win_layout_dialog.xml" value="0.14" />
+        <entry key="..\:/Users/25 881 610/Desktop/miniprojet/kidsIslandV15/kidsIslandV1/app/src/main/res/drawable/background_border.xml" value="0.15677083333333333" />
+        <entry key="..\:/Users/25 881 610/Desktop/miniprojet/kidsIslandV15/kidsIslandV1/app/src/main/res/layout/activity_about_app_en.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/25 881 610/Desktop/miniprojet/kidsIslandV15/kidsIslandV1/app/src/main/res/layout/activity_age.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/25 881 610/Desktop/miniprojet/kidsIslandV15/kidsIslandV1/app/src/main/res/layout/activity_database_easygames.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/25 881 610/Desktop/miniprojet/kidsIslandV15/kidsIslandV1/app/src/main/res/layout/activity_easygames.xml" value="0.33" />
+        <entry key="..\:/Users/25 881 610/Desktop/miniprojet/kidsIslandV15/kidsIslandV1/app/src/main/res/layout/activity_login.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/25 881 610/Desktop/miniprojet/kidsIslandV15/kidsIslandV1/app/src/main/res/layout/activity_main.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/25 881 610/Desktop/miniprojet/kidsIslandV15/kidsIslandV1/app/src/main/res/layout/activity_mainpuzzel.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/25 881 610/Desktop/miniprojet/kidsIslandV15/kidsIslandV1/app/src/main/res/layout/activity_memory_level.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/25 881 610/Desktop/miniprojet/kidsIslandV15/kidsIslandV1/app/src/main/res/layout/activity_memory_main.xml" value="0.3076923076923077" />
+        <entry key="..\:/Users/25 881 610/Desktop/miniprojet/kidsIslandV15/kidsIslandV1/app/src/main/res/layout/activity_play.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/25 881 610/Desktop/miniprojet/kidsIslandV15/kidsIslandV1/app/src/main/res/layout/activity_puzzel.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/25 881 610/Desktop/miniprojet/kidsIslandV15/kidsIslandV1/app/src/main/res/layout/activity_splash_screen.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/25 881 610/Desktop/miniprojet/kidsIslandV15/kidsIslandV1/app/src/main/res/layout/coming_soon_dialog.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/25 881 610/Desktop/miniprojet/kidsIslandV15/kidsIslandV1/app/src/main/res/layout/fragment_firstfrag_about_us.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/25 881 610/Desktop/miniprojet/kidsIslandV15/kidsIslandV1/app/src/main/res/layout/fragment_second_about_us.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/25 881 610/Desktop/miniprojet/kidsIslandV15/kidsIslandV1/app/src/main/res/layout/grid_element.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/25 881 610/Desktop/miniprojet/kidsIslandV15/kidsIslandV1/app/src/main/res/layout/lose_layout_dialog_easygames.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/25 881 610/Desktop/miniprojet/kidsIslandV15/kidsIslandV1/app/src/main/res/layout/player_item_easygames.xml" value="0.140625" />
+        <entry key="..\:/Users/25 881 610/Desktop/miniprojet/kidsIslandV15/kidsIslandV1/app/src/main/res/layout/rink_layout_dialog.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/25 881 610/Desktop/miniprojet/kidsIslandV15/kidsIslandV1/app/src/main/res/layout/settings_layout_dialog.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/25 881 610/Desktop/miniprojet/kidsIslandV15/kidsIslandV1/app/src/main/res/layout/win_diamond_layout_dialog.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/25 881 610/Desktop/miniprojet/kidsIslandV15/kidsIslandV1/app/src/main/res/layout/win_layout_dialog.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/25 881 610/Desktop/miniprojet/kidsIslandV8/kidsIslandV1/app/src/main/res/layout/activity_about_app_en.xml" value="0.25" />
+        <entry key="..\:/Users/25 881 610/Desktop/miniprojet/kidsIslandV8/kidsIslandV1/app/src/main/res/layout/activity_age.xml" value="0.33" />
+        <entry key="..\:/Users/25 881 610/Desktop/miniprojet/kidsIslandV8/kidsIslandV1/app/src/main/res/layout/activity_database_easygames.xml" value="0.18854166666666666" />
+        <entry key="..\:/Users/25 881 610/Desktop/miniprojet/kidsIslandV8/kidsIslandV1/app/src/main/res/layout/activity_easygames.xml" value="0.33" />
+        <entry key="..\:/Users/25 881 610/Desktop/miniprojet/kidsIslandV8/kidsIslandV1/app/src/main/res/layout/activity_login.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/25 881 610/Desktop/miniprojet/kidsIslandV8/kidsIslandV1/app/src/main/res/layout/activity_mainpuzzel.xml" value="0.18854166666666666" />
+        <entry key="..\:/Users/25 881 610/Desktop/miniprojet/kidsIslandV8/kidsIslandV1/app/src/main/res/layout/activity_memory_level.xml" value="0.33" />
+        <entry key="..\:/Users/25 881 610/Desktop/miniprojet/kidsIslandV8/kidsIslandV1/app/src/main/res/layout/activity_memory_main.xml" value="0.33" />
+        <entry key="..\:/Users/25 881 610/Desktop/miniprojet/kidsIslandV8/kidsIslandV1/app/src/main/res/layout/activity_play.xml" value="0.5" />
+        <entry key="..\:/Users/25 881 610/Desktop/miniprojet/kidsIslandV8/kidsIslandV1/app/src/main/res/layout/activity_puzzel.xml" value="0.27291666666666664" />
+        <entry key="..\:/Users/25 881 610/Desktop/miniprojet/kidsIslandV8/kidsIslandV1/app/src/main/res/layout/activity_splash_screen.xml" value="0.27291666666666664" />
+        <entry key="..\:/Users/25 881 610/Desktop/miniprojet/kidsIslandV8/kidsIslandV1/app/src/main/res/layout/coming_soon_dialog.xml" value="0.18854166666666666" />
+        <entry key="..\:/Users/25 881 610/Desktop/miniprojet/kidsIslandV8/kidsIslandV1/app/src/main/res/layout/fragment_firstfrag_about_us.xml" value="0.18854166666666666" />
+        <entry key="..\:/Users/25 881 610/Desktop/miniprojet/kidsIslandV8/kidsIslandV1/app/src/main/res/layout/grid_element.xml" value="0.1" />
+        <entry key="..\:/Users/25 881 610/Desktop/miniprojet/kidsIslandV8/kidsIslandV1/app/src/main/res/layout/lose_layout_dialog_easygames.xml" value="0.1" />
+        <entry key="..\:/Users/25 881 610/Desktop/miniprojet/kidsIslandV8/kidsIslandV1/app/src/main/res/layout/player_item_easygames.xml" value="0.75" />
+        <entry key="..\:/Users/25 881 610/Desktop/miniprojet/kidsIslandV8/kidsIslandV1/app/src/main/res/layout/rink_layout_dialog.xml" value="0.5" />
+        <entry key="..\:/Users/25 881 610/Desktop/miniprojet/kidsIslandV8/kidsIslandV1/app/src/main/res/layout/settings_layout_dialog.xml" value="0.33" />
+        <entry key="..\:/Users/25 881 610/Desktop/miniprojet/kidsIslandV8/kidsIslandV1/app/src/main/res/layout/win_diamond_layout_dialog.xml" value="0.5" />
+        <entry key="..\:/Users/25 881 610/Desktop/miniprojet/kidsIslandV8/kidsIslandV1/app/src/main/res/layout/win_layout_dialog.xml" value="0.67" />
+        <entry key="..\:/Users/laamouri ferdaws/OneDrive/Bureau/miniprojet android/kidsIslandV13/kidsIslandV1/app/src/main/res/drawable-v24/gradien_bg.xml" value="0.20462962962962963" />
+        <entry key="..\:/Users/laamouri ferdaws/OneDrive/Bureau/miniprojet android/kidsIslandV13/kidsIslandV1/app/src/main/res/layout/activity_about_app_en.xml" value="0.10052083333333334" />
+        <entry key="..\:/Users/laamouri ferdaws/OneDrive/Bureau/miniprojet android/kidsIslandV13/kidsIslandV1/app/src/main/res/layout/activity_easygames.xml" value="0.209375" />
+        <entry key="..\:/Users/laamouri ferdaws/OneDrive/Bureau/miniprojet android/kidsIslandV13/kidsIslandV1/app/src/main/res/layout/activity_main.xml" value="0.11096014492753623" />
+        <entry key="..\:/Users/laamouri ferdaws/OneDrive/Bureau/miniprojet android/kidsIslandV13/kidsIslandV1/app/src/main/res/layout/activity_mainpuzzel.xml" value="0.1" />
+        <entry key="..\:/Users/laamouri ferdaws/OneDrive/Bureau/miniprojet android/kidsIslandV13/kidsIslandV1/app/src/main/res/layout/activity_puzzel.xml" value="0.1" />
+        <entry key="..\:/Users/laamouri ferdaws/OneDrive/Bureau/miniprojet android/kidsIslandV13/kidsIslandV1/app/src/main/res/layout/win_layout_dialog.xml" value="0.209375" />
+        <entry key="..\:/Users/laamouri ferdaws/kidsIslandV1/app/src/main/res/drawable-v24/ic_galler.xml" value="0.11614583333333334" />
+        <entry key="..\:/Users/laamouri ferdaws/kidsIslandV1/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.22552083333333334" />
+        <entry key="..\:/Users/laamouri ferdaws/kidsIslandV1/app/src/main/res/drawable/background_border.xml" value="0.22552083333333334" />
+        <entry key="..\:/Users/laamouri ferdaws/kidsIslandV1/app/src/main/res/drawable/button.xml" value="0.22552083333333334" />
+        <entry key="..\:/Users/laamouri ferdaws/kidsIslandV1/app/src/main/res/drawable/ic_launcher_background.xml" value="0.22552083333333334" />
+        <entry key="..\:/Users/laamouri ferdaws/kidsIslandV1/app/src/main/res/layout/activity_about_app_en.xml" value="0.18" />
+        <entry key="..\:/Users/laamouri ferdaws/kidsIslandV1/app/src/main/res/layout/activity_age.xml" value="0.209375" />
+        <entry key="..\:/Users/laamouri ferdaws/kidsIslandV1/app/src/main/res/layout/activity_age_ar.xml" value="0.19655797101449277" />
+        <entry key="..\:/Users/laamouri ferdaws/kidsIslandV1/app/src/main/res/layout/activity_age_fr.xml" value="0.209375" />
+        <entry key="..\:/Users/laamouri ferdaws/kidsIslandV1/app/src/main/res/layout/activity_apropos_de_nous_ar.xml" value="0.14855072463768115" />
+        <entry key="..\:/Users/laamouri ferdaws/kidsIslandV1/app/src/main/res/layout/activity_aproposde_nous.xml" value="0.209375" />
+        <entry key="..\:/Users/laamouri ferdaws/kidsIslandV1/app/src/main/res/layout/activity_easygames.xml" value="0.1" />
+        <entry key="..\:/Users/laamouri ferdaws/kidsIslandV1/app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="..\:/Users/laamouri ferdaws/kidsIslandV1/app/src/main/res/layout/activity_mainpuzzel.xml" value="0.17481884057971014" />
+        <entry key="..\:/Users/laamouri ferdaws/kidsIslandV1/app/src/main/res/layout/activity_memory_main.xml" value="0.1" />
+        <entry key="..\:/Users/laamouri ferdaws/kidsIslandV1/app/src/main/res/layout/activity_play.xml" value="0.17481884057971014" />
+        <entry key="..\:/Users/laamouri ferdaws/kidsIslandV1/app/src/main/res/layout/activity_puzzel.xml" value="0.17481884057971014" />
+        <entry key="..\:/Users/laamouri ferdaws/kidsIslandV1/app/src/main/res/layout/activity_splash_screen.xml" value="0.12771739130434784" />
+        <entry key="..\:/Users/laamouri ferdaws/kidsIslandV1/app/src/main/res/layout/fragment_al_awal.xml" value="0.1" />
+        <entry key="..\:/Users/laamouri ferdaws/kidsIslandV1/app/src/main/res/layout/fragment_al_theni.xml" value="0.1" />
+        <entry key="..\:/Users/laamouri ferdaws/kidsIslandV1/app/src/main/res/layout/fragment_deuxieme_apropos.xml" value="0.209375" />
+        <entry key="..\:/Users/laamouri ferdaws/kidsIslandV1/app/src/main/res/layout/fragment_firstfrag_about_us.xml" value="0.209375" />
+        <entry key="..\:/Users/laamouri ferdaws/kidsIslandV1/app/src/main/res/layout/fragment_premier_apropos.xml" value="0.1953125" />
+        <entry key="..\:/Users/laamouri ferdaws/kidsIslandV1/app/src/main/res/layout/fragment_second_about_us.xml" value="0.209375" />
+        <entry key="..\:/Users/laamouri ferdaws/kidsIslandV1/app/src/main/res/layout/grid_element.xml" value="0.17481884057971014" />
+        <entry key="..\:/Users/laamouri ferdaws/kidsIslandV1/app/src/main/res/layout/win_layout_dialog.xml" value="0.103596757852077" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

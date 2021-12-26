@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">KidsIsland</string>
+    <string name="chose_level">choisir un niveau </string>
+    <string name="text_button_continue">Continue</string>
+    <!--    les niveaux français-->
+    <string name="text_button_level_easy">Facile</string>
+    <string name="text_button_level_medium">Moyenne</string>
+    <string name="text_button_level_hard">Difficile</string>
+    <string name="text_button_age3to5">de 3 à 5 ans</string>
+    <string name="text_button_age6to7">de 6 à 7 ans</string>
+    <string name="text_button_age8to10">de 8 à 10 ans</string>
+</resources>
