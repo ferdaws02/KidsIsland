@@ -16,6 +16,7 @@ import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import com.example.kidsislandv1.R
 import com.example.kidsislandv1.levels.easygames.*
+import kotlinx.android.synthetic.main.player_item_easygames.*
 import kotlinx.android.synthetic.main.win_diamond_layout_dialog.view.*
 import kotlinx.android.synthetic.main.win_layout_dialog.view.*
 import java.io.IOException
@@ -51,14 +52,21 @@ class puzzelActivity : AppCompatActivity() {
 
 
 
-
+        val PlayerText:TextView=findViewById(R.id.idtextplayerpuzzel)
+        val scoreText:TextView=findViewById(R.id.idtextscorepuzzel)
         val layout = findViewById<RelativeLayout>(R.id.layout)
         val imageView = findViewById<ImageView>(R.id.imageView)
         val intent = intent
         val assetName = intent.getStringExtra("assetName")
         mCurrentPhotoPath = intent.getStringExtra("mCurrentPhotoPath")
         mCurrentPhotoUri = intent.getStringExtra("mCurrentPhotoUri")
+        val namePlayer=intent.getStringExtra("profilnameverspuzzelA")
+        val scorePuzz=intent.getStringExtra("score")
 
+
+
+        PlayerText.setText(namePlayer)
+        scoreText.setText(scorePuzz)
 
 
 
@@ -477,12 +485,12 @@ if ( dataBase_easygames.DAOplayer_easygames().getPlayerbyName(intent.getStringEx
 
 
 
-        var player1=Player_easygames(1,"player1",0,0,0,0)
-        var player2=Player_easygames(2,"player2",0,0,0,0)
-        var player3=Player_easygames(3,"player3",0,0,0,0)
-        var player4=Player_easygames(4,"player4",0,0,0,0)
-        var player5=Player_easygames(5,"player5",0,0,0,0)
-        var player6=Player_easygames(6,"player6",0,0,0,0)
+        var player1=Player_easygames(1,"avatar1",0,0,0,0)
+        var player2=Player_easygames(2,"avatar2",0,0,0,0)
+        var player3=Player_easygames(3,"avatar3",0,0,0,0)
+        var player4=Player_easygames(4,"avatar4",0,0,0,0)
+        var player5=Player_easygames(5,"avatar5",0,0,0,0)
+        var player6=Player_easygames(6,"avatar6",0,0,0,0)
 
         dataBase_easygames = PlayerDataBase_easygames.getDatabase(this)
         PlayerList_easygames=ArrayList()
@@ -507,15 +515,15 @@ if ( dataBase_easygames.DAOplayer_easygames().getPlayerbyName(intent.getStringEx
 
         if ( textidfromintent == "avatar1") {
 
-            textscore.setText(dataBase_easygames.DAOplayer_easygames().getPlayerbyName("player1").toString())
+            textscore.setText(dataBase_easygames.DAOplayer_easygames().getPlayerbyName("avatar1").toString())
 
 
-            var scoreactueldeplayer1 = dataBase_easygames.DAOplayer_easygames().getPlayerbyName("player1")
+            var scoreactueldeplayer1 = dataBase_easygames.DAOplayer_easygames().getPlayerbyName("avatar1")
             var newScorePlayer1 =  scoreactueldeplayer1 + 10
 //            var newScorePlayer1 =  100
 
 
-            var diamondactueldeplayer1 = dataBase_easygames.DAOplayer_easygames().getPlayerdiamondbyName("player1")
+            var diamondactueldeplayer1 = dataBase_easygames.DAOplayer_easygames().getPlayerdiamondbyName("avatar1")
             if (newScorePlayer1 %100==0) {
                 var newdiamondPlayer1 =  diamondactueldeplayer1 + 1
                 dataBase_easygames.DAOplayer_easygames().updatediamond(newdiamondPlayer1.toString(),1)
@@ -537,16 +545,16 @@ if ( dataBase_easygames.DAOplayer_easygames().getPlayerbyName(intent.getStringEx
         else if ( textidfromintent == "avatar2") {
 
 
-            textscore.setText(dataBase_easygames.DAOplayer_easygames().getPlayerbyName("player2") .toString())
+            textscore.setText(dataBase_easygames.DAOplayer_easygames().getPlayerbyName("avatar2") .toString())
 
 
 
-            var scoreactueldeplayer2 = dataBase_easygames.DAOplayer_easygames().getPlayerbyName("player2")
+            var scoreactueldeplayer2 = dataBase_easygames.DAOplayer_easygames().getPlayerbyName("avatar2")
             var newScorePlayer2 =  scoreactueldeplayer2 + 10
 
 
 
-            var diamondactueldeplayer2 = dataBase_easygames.DAOplayer_easygames().getPlayerdiamondbyName("player2")
+            var diamondactueldeplayer2 = dataBase_easygames.DAOplayer_easygames().getPlayerdiamondbyName("avatar2")
             if (newScorePlayer2 %100==0) {
                 var newdiamondPlayer1 =  diamondactueldeplayer2 + 1
                 dataBase_easygames.DAOplayer_easygames().updatediamond(newdiamondPlayer1.toString(),1)
@@ -562,15 +570,15 @@ if ( dataBase_easygames.DAOplayer_easygames().getPlayerbyName(intent.getStringEx
 
         } else if ( textidfromintent == "avatar3") {
 
-            textscore.setText(dataBase_easygames.DAOplayer_easygames().getPlayerbyName("player3").toString())
+            textscore.setText(dataBase_easygames.DAOplayer_easygames().getPlayerbyName("avatar3").toString())
 
 
-            var scoreactueldeplayer3 = dataBase_easygames.DAOplayer_easygames().getPlayerbyName("player3")
+            var scoreactueldeplayer3 = dataBase_easygames.DAOplayer_easygames().getPlayerbyName("avatar3")
             var newScorePlayer3 =  scoreactueldeplayer3 + 10
 
 
 
-            var diamondactueldeplayer3 = dataBase_easygames.DAOplayer_easygames().getPlayerdiamondbyName("player3")
+            var diamondactueldeplayer3 = dataBase_easygames.DAOplayer_easygames().getPlayerdiamondbyName("avatar3")
             if (newScorePlayer3 %100==0) {
                 var newdiamondPlayer3 =  diamondactueldeplayer3 + 1
                 dataBase_easygames.DAOplayer_easygames().updatediamond(newdiamondPlayer3.toString(),1)
@@ -584,15 +592,15 @@ if ( dataBase_easygames.DAOplayer_easygames().getPlayerbyName(intent.getStringEx
 
         } else if ( textidfromintent == "avatar4") {
 
-            textscore.setText(dataBase_easygames.DAOplayer_easygames().getPlayerbyName("player4").toString())
+            textscore.setText(dataBase_easygames.DAOplayer_easygames().getPlayerbyName("avatar4").toString())
 
 
-            var  scoreactueldeplayer4 = dataBase_easygames.DAOplayer_easygames().getPlayerbyName("player4")
+            var  scoreactueldeplayer4 = dataBase_easygames.DAOplayer_easygames().getPlayerbyName("avatar4")
             var newScorePlayer4 =  scoreactueldeplayer4 + 10
 
 
 
-            var diamondactueldeplayer4 = dataBase_easygames.DAOplayer_easygames().getPlayerdiamondbyName("player4")
+            var diamondactueldeplayer4 = dataBase_easygames.DAOplayer_easygames().getPlayerdiamondbyName("avatar4")
             if (newScorePlayer4 %100==0) {
                 var newdiamondPlayer4 =  diamondactueldeplayer4 + 1
                 dataBase_easygames.DAOplayer_easygames().updatediamond(newdiamondPlayer4.toString(),1)
@@ -606,16 +614,16 @@ if ( dataBase_easygames.DAOplayer_easygames().getPlayerbyName(intent.getStringEx
 
         } else if ( textidfromintent == "avatar5") {
 
-            textscore.setText(dataBase_easygames.DAOplayer_easygames().getPlayerbyName("player5") .toString())
+            textscore.setText(dataBase_easygames.DAOplayer_easygames().getPlayerbyName("avatar5") .toString())
 
 
 
-            var scoreactueldeplayer5 = dataBase_easygames.DAOplayer_easygames().getPlayerbyName("player5")
+            var scoreactueldeplayer5 = dataBase_easygames.DAOplayer_easygames().getPlayerbyName("avatar5")
             var newScorePlayer5 =  scoreactueldeplayer5 + 10
 
 
 
-            var diamondactueldeplayer5 = dataBase_easygames.DAOplayer_easygames().getPlayerdiamondbyName("player5")
+            var diamondactueldeplayer5 = dataBase_easygames.DAOplayer_easygames().getPlayerdiamondbyName("avatar5")
             if (newScorePlayer5 %100==0) {
                 var newdiamondPlayer5 =  diamondactueldeplayer5 + 1
                 dataBase_easygames.DAOplayer_easygames().updatediamond(newdiamondPlayer5.toString(),1)
@@ -630,16 +638,16 @@ if ( dataBase_easygames.DAOplayer_easygames().getPlayerbyName(intent.getStringEx
         } else {
 
 
-            textscore.setText(dataBase_easygames.DAOplayer_easygames().getPlayerbyName("player6").toString())
+            textscore.setText(dataBase_easygames.DAOplayer_easygames().getPlayerbyName("avatar6").toString())
 
 
 
-            var  scoreactueldeplayer6 = dataBase_easygames.DAOplayer_easygames().getPlayerbyName("player6")
+            var  scoreactueldeplayer6 = dataBase_easygames.DAOplayer_easygames().getPlayerbyName("avatar6")
             var newScorePlayer6 =  scoreactueldeplayer6 + 10
 
 
 
-            var diamondactueldeplayer6 = dataBase_easygames.DAOplayer_easygames().getPlayerdiamondbyName("player6")
+            var diamondactueldeplayer6 = dataBase_easygames.DAOplayer_easygames().getPlayerdiamondbyName("avatar6")
             if (newScorePlayer6 %100==0) {
                 var newdiamondPlayer6 =  diamondactueldeplayer6 + 1
                 dataBase_easygames.DAOplayer_easygames().updatediamond(newdiamondPlayer6.toString(),1)

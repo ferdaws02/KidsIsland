@@ -16,14 +16,16 @@
 
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        tools:layout_editor_absoluteY="105dp">
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <androidx.appcompat.widget.LinearLayoutCompat
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:orientation="horizontal"
-           >
+            android:orientation="horizontal">
 
 
             <com.google.android.material.imageview.ShapeableImageView
@@ -41,9 +43,7 @@
                 app:shapeAppearanceOverlay="@style/RondedSquare"
 
 
-            />
-
-
+                />
 
 
             <com.google.android.material.imageview.ShapeableImageView

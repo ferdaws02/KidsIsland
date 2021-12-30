@@ -24,7 +24,7 @@ interface playerDAo_easygames {
     fun searchByName (name:String): Boolean
 
 
-    @Query("SELECT score FROM Player where name=:name")
+    @Query("SELECT score FROM Player where name LIKE '%' || :name || '%'")
     fun getPlayerbyName(name: String): Int
 
     @Query("SELECT diamond FROM Player where name=:name")

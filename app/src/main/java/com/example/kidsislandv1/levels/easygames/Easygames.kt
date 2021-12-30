@@ -1,5 +1,6 @@
 package com.example.kidsislandv1.levels.easygames
 
+import android.content.Context
 import android.content.Intent
 import android.media.MediaPlayer
 import androidx.appcompat.app.AppCompatActivity
@@ -51,6 +52,7 @@ class Easygames : AppCompatActivity() {
 
      override fun onBackPressed (){
          super.onBackPressed()
+
        var intent = Intent(this, play::class.java)
        startActivity(intent)
 

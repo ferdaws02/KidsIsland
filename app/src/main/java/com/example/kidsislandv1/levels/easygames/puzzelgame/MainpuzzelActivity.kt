@@ -19,6 +19,7 @@ import androidx.core.content.ContextCompat
 import androidx.core.content.FileProvider
 import com.example.kidsislandv1.R
 import com.example.kidsislandv1.levels.easygames.Easygames
+import com.example.kidsislandv1.levels.easygames.PlayerDataBase_easygames
 import com.example.kidsislandv1.levels.easygames.memorygame.MemoryLevel
 import java.io.File
 import java.io.IOException
@@ -28,6 +29,7 @@ import java.util.*
 class MainpuzzelActivity : AppCompatActivity() {
     var mCurrentPhotoPath: String? = null
     var mMediaPlayer: MediaPlayer? = null
+    lateinit var dataBase_easygames : PlayerDataBase_easygames
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_mainpuzzel)
@@ -36,9 +38,12 @@ class MainpuzzelActivity : AppCompatActivity() {
         var textid: TextView = findViewById(R.id.idtextplayer)
         var textscore: TextView = findViewById(R.id.idtextscore)
 
-        val playernameMainpuzzelActivity = intent.getStringExtra("profileNameEasygames")
+        val playernameMainpuzzelActivity = intent.getStringExtra("profileNameEasygames").toString()
+        println("********************************** BRABI IL INTENT FIL PUZLE FI************ ="+playernameMainpuzzelActivity )
         textid.setText(playernameMainpuzzelActivity)
-
+        dataBase_easygames = PlayerDataBase_easygames.getDatabase(this)
+        val score:Int =dataBase_easygames.DAOplayer_easygames().getPlayerbyName(playernameMainpuzzelActivity)
+        textscore.setText(dataBase_easygames.DAOplayer_easygames().getPlayerbyName(playernameMainpuzzelActivity).toString())
         playSound()
 
 
@@ -57,6 +62,7 @@ class MainpuzzelActivity : AppCompatActivity() {
                     val intent = Intent(applicationContext, puzzelActivity::class.java)
                     intent.putExtra("assetName", files!![i % files.size])
                     intent.putExtra("profilnameverspuzzelA", playernameMainpuzzelActivity)
+                    intent.putExtra("score",score)
                     finish()
                     startActivity(intent)
                 }

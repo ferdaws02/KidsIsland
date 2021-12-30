@@ -1,6 +1,8 @@
 package com.example.kidsislandv1.levels.easygames
 
+import android.content.Context
 import android.content.Intent
+import android.content.SharedPreferences
 import android.media.MediaPlayer
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -24,7 +26,10 @@ import kotlinx.android.synthetic.main.activity_play.*
 import kotlinx.android.synthetic.main.settings_layout_dialog.*
 import kotlinx.android.synthetic.main.settings_layout_dialog.view.*
 
+const val PREF_NAME = "LOGIN_PREF"
+const val IMAGE = "IMAGE"
 
+const val IS_REMEMBRED = "IS_REMEMBRED"
 class play : AppCompatActivity() {
 
 
@@ -44,18 +49,11 @@ class play : AppCompatActivity() {
     var mMediaPlayer: MediaPlayer? = null
 
 
-
     lateinit var PlayerAdapter: PlayerAdapter_easygames
     lateinit var playerList_easygames: MutableList<Player_easygames>
     lateinit var Database_easygames : PlayerDataBase_easygames
-  //  lateinit var dataBase_easygames : PlayerDataBase_easygames
     lateinit var recylcerPlayer: RecyclerView
     lateinit var recylcerPlayerAdapter: PlayerAdapter_easygames
-//    lateinit var Playerlist_easygames: MutableList<Player_easygames>
-//
-//
-
-
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -84,14 +82,12 @@ class play : AppCompatActivity() {
 
 
 
-
-
-
-
-
+        loadData ()
 
 
         playSound()
+
+
 
          bntsplit.setOnClickListener {
 
@@ -117,9 +113,6 @@ class play : AppCompatActivity() {
                  dialog.dismiss()}
 
         }
-
-
-
 
          bntsetting.setOnClickListener {
 
@@ -151,37 +144,7 @@ class play : AppCompatActivity() {
 
         }
 
-
-
-
-
-
-
-
-
-
          bntshop.setOnClickListener {
-
-//             AudioPlay.playAudioButton(this, soudClick)
-//
-//             val view = View.inflate(this@play, R.layout.coming_soon_dialog, null)
-//
-//             val builder = AlertDialog.Builder(this@play)
-//             builder.setView(view)
-//
-//           //  AudioPlay.continuePlaying(this, musicHome)
-//
-//             val dialog = builder.create()
-//             dialog.show()
-//             dialog.window?.setBackgroundDrawableResource(android.R.color.transparent)
-//             dialog.setCancelable(false)
-//
-//
-//             view.buttonidcancelcoming.setOnClickListener{
-//                 AudioPlay.playAudioButton(this, soudClick)
-//                 dialog.dismiss()}
-
-
              AudioPlay.playAudioButton(this, soudClick)
 
              val view = View.inflate(this@play, R.layout.win_diamond_layout_dialog, null)
@@ -226,10 +189,6 @@ class play : AppCompatActivity() {
                dialog.dismiss()}
 
         }
-
-
-
-
         bntdatabase.setOnClickListener {
 
 
@@ -245,16 +204,6 @@ class play : AppCompatActivity() {
         dialog.window?.setBackgroundDrawableResource(android.R.color.transparent)
         dialog.setCancelable(false)
 
-//            val rvTest = dialog.findViewById<View>(R.id.recycleViewdialogbox) as RecyclerView?
-//            rvTest!!.setHasFixedSize(true)
-//            rvTest!!.layoutManager = LinearLayoutManager(this)
-//
-//
-//            val rvAdapter = PlayerAdapter_easygames(Playerlist_easygames)
-//            rvTest!!.adapter = rvAdapter
-//
-
-
 //
             recylcerPlayer=dialog.findViewById<View>(R.id.recycleViewdialogbox)as RecyclerView
             playerList_easygames = ArrayList()
@@ -267,18 +216,6 @@ class play : AppCompatActivity() {
             recylcerPlayer.adapter = recylcerPlayerAdapter
 
             recylcerPlayer.layoutManager = LinearLayoutManager(this , LinearLayoutManager.VERTICAL ,false)
-
-
-
-
-
-
-
-
-
-
-
-
 
 
                 view.buttonidcancelloserink.setOnClickListener{
@@ -298,17 +235,9 @@ class play : AppCompatActivity() {
         }
 
 
+             val selectavatarbutton : ImageView
 
-
-
-
-
-
-        val selectavatarbutton : ImageView
         selectavatarbutton = findViewById(R.id.idbtnselectavatar)
-
-
-
         selectavatarbutton.setOnClickListener {
             AudioPlay.playAudioButton(this, soudClick)
 
@@ -325,62 +254,52 @@ class play : AppCompatActivity() {
 
             view.idavatar1.setOnClickListener {
                 AudioPlay.playAudioButton(this, soudClick)
-                val intent = Intent(this,play::class.java)
-
-                intent.putExtra("Username","avatar1")
-                finish()
-                startActivity(intent)
-
-
+                saveData("avatar1")
+                selectavatarbutton.setImageResource(R.drawable.avatar1)
                 dialog.dismiss()
 
 
             }
             view.idavatar2.setOnClickListener {
                 AudioPlay.playAudioButton(this, soudClick)
-                val intent = Intent(this,play::class.java)
-                intent.putExtra("Username","avatar2")
-                finish()
-                startActivity(intent)
+                saveData("avatar2")
+                selectavatarbutton.setImageResource(R.drawable.avatar2)
                 dialog.dismiss()
 
             }
             view.idavatar3.setOnClickListener {
                 AudioPlay.playAudioButton(this, soudClick)
-
-                val intent = Intent(this,play::class.java)
-                intent.putExtra("Username","avatar3")
-                finish()
-                startActivity(intent)
-
+                saveData("avatar3")
+                selectavatarbutton.setImageResource(R.drawable.avatar3)
                 dialog.dismiss()
 
             }
             view.idavatar4.setOnClickListener {
                 AudioPlay.playAudioButton(this, soudClick)
-                val intent = Intent(this,play::class.java)
-                intent.putExtra("Username","avatar4")
-                finish()
-                startActivity(intent)
+
+                saveData("avatar4")
+                selectavatarbutton.setImageResource(R.drawable.avatar4)
+
                 dialog.dismiss()
 
             }
             view.idavatar5.setOnClickListener {
                 AudioPlay.playAudioButton(this, soudClick)
-                val intent = Intent(this,play::class.java)
-                intent.putExtra("Username","avatar5")
-                finish()
-                startActivity(intent)
+
+
+                saveData("avatar5")
+                selectavatarbutton.setImageResource(R.drawable.avatar5)
+
+
                 dialog.dismiss()
 
             }
             view.idavatar6.setOnClickListener {
                 AudioPlay.playAudioButton(this, soudClick)
 
-                val intent = Intent(this,play::class.java)
-                intent.putExtra("Username","avatar6")
-                finish()
-                startActivity(intent)
+                saveData("avatar6")
+                selectavatarbutton.setImageResource(R.drawable.avatar6)
+
                 dialog.dismiss()
 
 
@@ -392,22 +311,17 @@ class play : AppCompatActivity() {
 
         }
 
+        val sharedPreferences = getSharedPreferences( "sharedPrefs", Context.MODE_PRIVATE)
+        val profileName=sharedPreferences.getString( "STRING_KEY",  null).toString()
 
-        val profileName=intent.getStringExtra("Username").toString()
-
-        println("papapapappssds"+profileName)
-        putImageHome (profileName)
-
-
-       // println("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIIIIIIIIIIIIIIIIIIIIII"+Database_easygames.DAOplayer_easygames().getPlayerbyName("avatar1").toString())
-
+        println("************************ta3tina il NAME yehdik*********  "+profileName)
         Database_easygames.DAOplayer_easygames().getAllPlayer()
 
-        scorehome.setText(Database_easygames.DAOplayer_easygames().getPlayerbyName("avatar1").toString())
+        scorehome.setText(Database_easygames.DAOplayer_easygames().getPlayerbyName(profileName).toString())
         diamondhome.setText(Database_easygames.DAOplayer_easygames().getPlayerdiamondbyName(profileName).toString())
 
 
-
+println("************************ta3tina il score yehdik*********  "+Database_easygames.DAOplayer_easygames().getPlayerbyName(profileName).toString())
         val play : ImageButton =findViewById(R.id.Play)
         play.setOnClickListener {
             AudioPlay.playAudioButton(this, soudClick)
@@ -417,8 +331,8 @@ class play : AppCompatActivity() {
 
 
 
-                   if (Database_easygames.DAOplayer_easygames().searchByName("player1")){
-                       var player1=Player_easygames(1,"player1",Database_easygames.DAOplayer_easygames().getPlayerbyName("player1"),R.drawable.avatar1,R.drawable.purple_backgraundithem,Database_easygames.DAOplayer_easygames().getPlayerdiamondbyName("player1"))
+                   if (Database_easygames.DAOplayer_easygames().searchByName("avatar1")){
+                       var player1=Player_easygames(1,"avatar1",Database_easygames.DAOplayer_easygames().getPlayerbyName("avatar1"),R.drawable.avatar1,R.drawable.purple_backgraundithem,Database_easygames.DAOplayer_easygames().getPlayerdiamondbyName("avatar1"))
                        Database_easygames.DAOplayer_easygames().insert(player1)
                        playerList_easygames.add(player1)
                        PlayerAdapter.PlayerList_easygames = playerList_easygames
@@ -427,7 +341,7 @@ class play : AppCompatActivity() {
 
                    }else{
 
-                    var player1=Player_easygames(1,"player1",0,R.drawable.avatar1,R.drawable.purple_backgraundithem,0)
+                    var player1=Player_easygames(1,"avatar1",0,R.drawable.avatar1,R.drawable.purple_backgraundithem,0)
 
 
                        Database_easygames.DAOplayer_easygames().insert(player1)
@@ -437,15 +351,15 @@ class play : AppCompatActivity() {
                 }
 
                 else if (profileName == "avatar2") {
-                    if (Database_easygames.DAOplayer_easygames().searchByName("player2")){
-                        var player2=Player_easygames(2,"player2",Database_easygames.DAOplayer_easygames().getPlayerbyName("player2"),R.drawable.avatar2,R.drawable.bluegraundithem,Database_easygames.DAOplayer_easygames().getPlayerdiamondbyName("player2"))
+                    if (Database_easygames.DAOplayer_easygames().searchByName("avatar2")){
+                        var player2=Player_easygames(2,"avatar2",Database_easygames.DAOplayer_easygames().getPlayerbyName("avatar2"),R.drawable.avatar2,R.drawable.bluegraundithem,Database_easygames.DAOplayer_easygames().getPlayerdiamondbyName("avatar2"))
                         Database_easygames.DAOplayer_easygames().insert(player2)
                         playerList_easygames.add(player2)
                         PlayerAdapter.PlayerList_easygames = playerList_easygames
                         PlayerAdapter.notifyDataSetChanged()
                     }else{
 
-                        var player2=Player_easygames(2,"player2",0,R.drawable.avatar2,R.drawable.bluegraundithem,0)
+                        var player2=Player_easygames(2,"avatar2",0,R.drawable.avatar2,R.drawable.bluegraundithem,0)
 
 
                         Database_easygames.DAOplayer_easygames().insert(player2)
@@ -454,15 +368,15 @@ class play : AppCompatActivity() {
                         PlayerAdapter.notifyDataSetChanged()}
 
                 } else if (profileName == "avatar3") {
-                    if (Database_easygames.DAOplayer_easygames().searchByName("player3")){
-                        var player3=Player_easygames(3,"player3",Database_easygames.DAOplayer_easygames().getPlayerbyName("player3"),R.drawable.avatar3,R.drawable.pinkbackgraundithem,Database_easygames.DAOplayer_easygames().getPlayerdiamondbyName("player3"))
+                    if (Database_easygames.DAOplayer_easygames().searchByName("avatar3")){
+                        var player3=Player_easygames(3,"avatar3",Database_easygames.DAOplayer_easygames().getPlayerbyName("avatar3"),R.drawable.avatar3,R.drawable.pinkbackgraundithem,Database_easygames.DAOplayer_easygames().getPlayerdiamondbyName("avatar3"))
                         Database_easygames.DAOplayer_easygames().insert(player3)
                         playerList_easygames.add(player3)
                         PlayerAdapter.PlayerList_easygames = playerList_easygames
                         PlayerAdapter.notifyDataSetChanged()
                     }else{
 
-                        var player3=Player_easygames(3,"player3",0,R.drawable.avatar3,R.drawable.pinkbackgraundithem,0)
+                        var player3=Player_easygames(3,"avatar3",0,R.drawable.avatar3,R.drawable.pinkbackgraundithem,0)
 
 
                         Database_easygames.DAOplayer_easygames().insert(player3)
@@ -471,15 +385,15 @@ class play : AppCompatActivity() {
                         PlayerAdapter.notifyDataSetChanged()
                     }
                 } else if (profileName == "avatar4") {
-                    if (Database_easygames.DAOplayer_easygames().searchByName("player4")){
-                        var player4=Player_easygames(4,"player4",Database_easygames.DAOplayer_easygames().getPlayerbyName("player4"),R.drawable.avatar4,R.drawable.greybackgraundithem,Database_easygames.DAOplayer_easygames().getPlayerdiamondbyName("player4"))
+                    if (Database_easygames.DAOplayer_easygames().searchByName("avatar4")){
+                        var player4=Player_easygames(4,"avatar4",Database_easygames.DAOplayer_easygames().getPlayerbyName("avatar4"),R.drawable.avatar4,R.drawable.greybackgraundithem,Database_easygames.DAOplayer_easygames().getPlayerdiamondbyName("avatar4"))
                         Database_easygames.DAOplayer_easygames().insert(player4)
                         playerList_easygames.add(player4)
                         PlayerAdapter.PlayerList_easygames = playerList_easygames
                         PlayerAdapter.notifyDataSetChanged()
                     }else{
 
-                        var player4=Player_easygames(4,"player4",0,R.drawable.avatar4,R.drawable.greybackgraundithem,0)
+                        var player4=Player_easygames(4,"avatar4",0,R.drawable.avatar4,R.drawable.greybackgraundithem,0)
 
 
                         Database_easygames.DAOplayer_easygames().insert(player4)
@@ -488,15 +402,15 @@ class play : AppCompatActivity() {
                         PlayerAdapter.notifyDataSetChanged()}
 
                 } else if (profileName == "avatar5") {
-                    if (Database_easygames.DAOplayer_easygames().searchByName("player5")){
-                        var player5=Player_easygames(5,"player1",Database_easygames.DAOplayer_easygames().getPlayerbyName("player5"),R.drawable.avatar5,R.drawable.yellowbackgraundithem,Database_easygames.DAOplayer_easygames().getPlayerdiamondbyName("player5"))
+                    if (Database_easygames.DAOplayer_easygames().searchByName("avatar5")){
+                        var player5=Player_easygames(5,"avatar5",Database_easygames.DAOplayer_easygames().getPlayerbyName("avatar5"),R.drawable.avatar5,R.drawable.yellowbackgraundithem,Database_easygames.DAOplayer_easygames().getPlayerdiamondbyName("avatar5"))
                         Database_easygames.DAOplayer_easygames().insert(player5)
                         playerList_easygames.add(player5)
                         PlayerAdapter.PlayerList_easygames = playerList_easygames
                         PlayerAdapter.notifyDataSetChanged()
                     }else{
 
-                        var player5=Player_easygames(5,"player5",0,R.drawable.avatar5,R.drawable.yellowbackgraundithem,0)
+                        var player5=Player_easygames(5,"avatar5",0,R.drawable.avatar5,R.drawable.yellowbackgraundithem,0)
 
 
                         Database_easygames.DAOplayer_easygames().insert(player5)
@@ -504,15 +418,15 @@ class play : AppCompatActivity() {
                         PlayerAdapter.PlayerList_easygames = playerList_easygames
                         PlayerAdapter.notifyDataSetChanged()}
                 } else {
-                    if (Database_easygames.DAOplayer_easygames().searchByName("player6")){
-                        var player6=Player_easygames(6,"player6",Database_easygames.DAOplayer_easygames().getPlayerbyName("player6"),R.drawable.avatar6,R.drawable.blackbackgraundithem,Database_easygames.DAOplayer_easygames().getPlayerdiamondbyName("player6"))
+                    if (Database_easygames.DAOplayer_easygames().searchByName("avatarr6")){
+                        var player6=Player_easygames(6,"avatar6",Database_easygames.DAOplayer_easygames().getPlayerbyName("avatar6"),R.drawable.avatar6,R.drawable.blackbackgraundithem,Database_easygames.DAOplayer_easygames().getPlayerdiamondbyName("avatar6"))
                         Database_easygames.DAOplayer_easygames().insert(player6)
                         playerList_easygames.add(player6)
                         PlayerAdapter.PlayerList_easygames = playerList_easygames
                         PlayerAdapter.notifyDataSetChanged()
                     }else{
 
-                        var player6=Player_easygames(6,"player6",0,R.drawable.avatar6,R.drawable.blackbackgraundithem,0)
+                        var player6=Player_easygames(6,"avatar6",0,R.drawable.avatar6,R.drawable.blackbackgraundithem,3)
 
 
                         Database_easygames.DAOplayer_easygames().insert(player6)
@@ -520,8 +434,6 @@ class play : AppCompatActivity() {
                         PlayerAdapter.PlayerList_easygames = playerList_easygames
                         PlayerAdapter.notifyDataSetChanged()}
                 }
-
-
 
 
 
@@ -536,26 +448,6 @@ class play : AppCompatActivity() {
 
         }
 
-
-
-
-    fun  putImageHome (profileName:String) {
-
-
-        val selectavatarbutton : ImageView = findViewById(R.id.idbtnselectavatar)
-        val drawableRessource = when (profileName){
-
-            "avatar1"->R.drawable.avatar1
-            "avatar2"->R.drawable.avatar2
-            "avatar3"->R.drawable.avatar3
-            "avatar4"->R.drawable.avatar4
-            "avatar5"->R.drawable.avatar5
-            else ->R.drawable.avatar6
-
-        }
-        selectavatarbutton.setImageResource(drawableRessource)
-
-    }
 
     // 1. Plays the water sound
     fun playSound() {
@@ -589,17 +481,48 @@ class play : AppCompatActivity() {
             mMediaPlayer = null
         }
     }
-//    override fun onBackPressed (){
-//        super.onBackPressed()
-//        var intent = Intent(this, age::class.java)
-//        startActivity(intent)
-//
-//    }
 
 
+
+    private fun saveData(savetext:String){
+
+
+
+        val sharedPreferences =getSharedPreferences( "sharedPrefs", Context.MODE_PRIVATE)
+        val editor = sharedPreferences.edit()
+        editor.apply {
+            putString("STRING_KEY", savetext)
+
+        }.apply()
+
+    }
+
+
+    private fun loadData() {
+
+        val sharedPreferences = getSharedPreferences( "sharedPrefs", Context.MODE_PRIVATE)
+        val savedString = sharedPreferences.getString( "STRING_KEY",  null)
+
+
+        var selectavatarbutton : ImageView = findViewById(R.id.idbtnselectavatar)
+
+        var drawableRessource = when (savedString){
+
+            "avatar1"->R.drawable.avatar1
+            "avatar2"->R.drawable.avatar2
+            "avatar3"->R.drawable.avatar3
+            "avatar4"->R.drawable.avatar4
+            "avatar5"->R.drawable.avatar5
+            else ->R.drawable.avatar6
+        }
+
+        selectavatarbutton.setImageResource(drawableRessource)
 
 
 
 
 
     }
+
+
+}
