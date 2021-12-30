@@ -1,6 +1,7 @@
 package com.example.kidsislandv1.levels.easygames.puzzelgame
 
 import android.Manifest
+import android.content.Context
 import android.content.Intent
 import android.content.pm.PackageManager
 import android.media.MediaPlayer
@@ -42,10 +43,11 @@ class MainpuzzelActivity : AppCompatActivity() {
         println("********************************** BRABI IL INTENT FIL PUZLE FI************ ="+playernameMainpuzzelActivity )
         textid.setText(playernameMainpuzzelActivity)
         dataBase_easygames = PlayerDataBase_easygames.getDatabase(this)
-        val score:Int =dataBase_easygames.DAOplayer_easygames().getPlayerbyName(playernameMainpuzzelActivity)
-        textscore.setText(dataBase_easygames.DAOplayer_easygames().getPlayerbyName(playernameMainpuzzelActivity).toString())
+        val score =dataBase_easygames.DAOplayer_easygames().getPlayerbyName(playernameMainpuzzelActivity).toString()
+        textscore.text=score
+        println("********************************** BRABI IL SCORE FIL INTENT************ ="+score)
         playSound()
-
+        loadData()
 
         val am = assets
         try {
@@ -222,6 +224,18 @@ class MainpuzzelActivity : AppCompatActivity() {
     }
 
 
+    private fun loadData() {
 
+
+        var textid: TextView = findViewById(R.id.idtextplayer)
+        var textscore: TextView = findViewById(R.id.idtextscore)
+        val sharedPreferences = getSharedPreferences( "sharedPrefs", Context.MODE_PRIVATE)
+        val savedString = sharedPreferences.getString( "STRING_KEY",  null)
+        val savedScore= sharedPreferences.getString( "STRING_SCORE",  null)
+        println("*****************il score fil LOAD**************** "+savedScore)
+        textid.setText(savedString )
+        textscore.setText(savedScore )
+
+    }
 
 }

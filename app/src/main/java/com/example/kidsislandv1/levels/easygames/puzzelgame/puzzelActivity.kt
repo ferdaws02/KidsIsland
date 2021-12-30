@@ -1,5 +1,6 @@
 package com.example.kidsislandv1.levels.easygames.puzzelgame
 
+import android.content.Context
 import android.content.Intent
 import android.graphics.*
 import android.graphics.drawable.BitmapDrawable
@@ -63,12 +64,12 @@ class puzzelActivity : AppCompatActivity() {
         val namePlayer=intent.getStringExtra("profilnameverspuzzelA")
         val scorePuzz=intent.getStringExtra("score")
 
-
+println("*************score fil intent puzzelActivity  *******"+scorePuzz)
 
         PlayerText.setText(namePlayer)
         scoreText.setText(scorePuzz)
 
-
+        loadData()
 
 
         // run image related code after the view was laid out
@@ -496,7 +497,6 @@ if ( dataBase_easygames.DAOplayer_easygames().getPlayerbyName(intent.getStringEx
         PlayerList_easygames=ArrayList()
         PlayerAdapter_easygames =PlayerAdapter_easygames(PlayerList_easygames)
 
-     //   val textidfromintent = intent.getStringExtra("playername")
 
 
 
@@ -727,7 +727,18 @@ if ( dataBase_easygames.DAOplayer_easygames().getPlayerbyName(intent.getStringEx
         }
     }
 
+    private fun loadData() {
 
+
+        val PlayerText:TextView=findViewById(R.id.idtextplayerpuzzel)
+        val scoreText:TextView=findViewById(R.id.idtextscorepuzzel)
+        val sharedPreferences = getSharedPreferences( "sharedPrefs", Context.MODE_PRIVATE)
+        val savedString = sharedPreferences.getString( "STRING_KEY",  null)
+        val savedScore= sharedPreferences.getString( "STRING_SCORE",  null)
+        PlayerText.setText(savedString )
+        scoreText.setText(savedScore )
+
+    }
 
 
 }

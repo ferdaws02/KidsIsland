@@ -1,6 +1,7 @@
 package com.example.kidsislandv1.levels.easygames.memorygame
 
 
+import android.content.Context
 import android.content.Intent
 import android.media.MediaPlayer
 import androidx.appcompat.app.AppCompatActivity
@@ -46,7 +47,7 @@ class MemoryMainActivity : AppCompatActivity() {
         println("***************************IL SCORE FIH* ******  ="+dataBase_easygames.DAOplayer_easygames().getPlayerbyName(playernamememorygameActivity).toString())
 
 
-
+        loadData()
         playSound()
 
 
@@ -228,7 +229,7 @@ class MemoryMainActivity : AppCompatActivity() {
         val textidfromintent = intent.getStringExtra("profileNameEasygames")
 
 
-
+        println("**********************textidfromintent******************  "+textidfromintent)
 
 
         val textscore: TextView = findViewById(R.id.idtextscorememory)
@@ -242,6 +243,7 @@ class MemoryMainActivity : AppCompatActivity() {
             textscore.setText(dataBase_easygames.DAOplayer_easygames().getPlayerbyName("avatar1").toString())
 
             var scoreactueldeplayer1 = dataBase_easygames.DAOplayer_easygames().getPlayerbyName("avatar1")
+            println("**************************le score actuel ********** "+scoreactueldeplayer1)
           var newScorePlayer1 =  scoreactueldeplayer1 + 10
 //           var newScorePlayer1 =  100
 
@@ -419,6 +421,19 @@ class MemoryMainActivity : AppCompatActivity() {
             mMediaPlayer = null
         }
     }
+    private fun loadData() {
+
+
+        var textid :    TextView = findViewById(R.id.idtextplayermemory)
+        var textscore : TextView = findViewById(R.id.idtextscorememory)
+        val sharedPreferences = getSharedPreferences( "sharedPrefs", Context.MODE_PRIVATE)
+        val savedString = sharedPreferences.getString( "STRING_KEY",  null)
+        val savedScore= sharedPreferences.getString( "STRING_SCORE",  null)
+        textid.setText(savedString )
+        textscore.setText(savedScore )
+
+    }
+
 
 
 

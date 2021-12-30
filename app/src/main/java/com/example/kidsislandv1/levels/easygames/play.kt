@@ -254,7 +254,9 @@ class play : AppCompatActivity() {
 
             view.idavatar1.setOnClickListener {
                 AudioPlay.playAudioButton(this, soudClick)
-                saveData("avatar1")
+                Database_easygames= PlayerDataBase_easygames.getDatabase(this)
+                var score= Database_easygames.DAOplayer_easygames().getPlayerbyName("avatar1").toString()
+                saveDataNS("avatar1",score)
                 selectavatarbutton.setImageResource(R.drawable.avatar1)
                 dialog.dismiss()
 
@@ -262,22 +264,27 @@ class play : AppCompatActivity() {
             }
             view.idavatar2.setOnClickListener {
                 AudioPlay.playAudioButton(this, soudClick)
-                saveData("avatar2")
+                Database_easygames= PlayerDataBase_easygames.getDatabase(this)
+                var score= Database_easygames.DAOplayer_easygames().getPlayerbyName("avatar2").toString()
+                saveDataNS("avatar2",score)
                 selectavatarbutton.setImageResource(R.drawable.avatar2)
                 dialog.dismiss()
 
             }
             view.idavatar3.setOnClickListener {
                 AudioPlay.playAudioButton(this, soudClick)
-                saveData("avatar3")
+                Database_easygames= PlayerDataBase_easygames.getDatabase(this)
+                var score= Database_easygames.DAOplayer_easygames().getPlayerbyName("avatar3").toString()
+                saveDataNS("avatar3",score)
                 selectavatarbutton.setImageResource(R.drawable.avatar3)
                 dialog.dismiss()
 
             }
             view.idavatar4.setOnClickListener {
                 AudioPlay.playAudioButton(this, soudClick)
-
-                saveData("avatar4")
+                Database_easygames= PlayerDataBase_easygames.getDatabase(this)
+                var score= Database_easygames.DAOplayer_easygames().getPlayerbyName("avatar4").toString()
+                saveDataNS("avatar4",score)
                 selectavatarbutton.setImageResource(R.drawable.avatar4)
 
                 dialog.dismiss()
@@ -285,9 +292,9 @@ class play : AppCompatActivity() {
             }
             view.idavatar5.setOnClickListener {
                 AudioPlay.playAudioButton(this, soudClick)
-
-
-                saveData("avatar5")
+                Database_easygames= PlayerDataBase_easygames.getDatabase(this)
+                var score= Database_easygames.DAOplayer_easygames().getPlayerbyName("avatar5").toString()
+                saveDataNS("avatar5",score)
                 selectavatarbutton.setImageResource(R.drawable.avatar5)
 
 
@@ -296,8 +303,9 @@ class play : AppCompatActivity() {
             }
             view.idavatar6.setOnClickListener {
                 AudioPlay.playAudioButton(this, soudClick)
-
-                saveData("avatar6")
+                Database_easygames= PlayerDataBase_easygames.getDatabase(this)
+                var score= Database_easygames.DAOplayer_easygames().getPlayerbyName("avatar6").toString()
+                saveDataNS("avatar6",score)
                 selectavatarbutton.setImageResource(R.drawable.avatar6)
 
                 dialog.dismiss()
@@ -481,6 +489,27 @@ println("************************ta3tina il score yehdik*********  "+Database_ea
             mMediaPlayer = null
         }
     }
+
+
+    private fun saveDataNS(savetext:String,savescore:String){
+
+
+
+        val sharedPreferences =getSharedPreferences( "sharedPrefs", Context.MODE_PRIVATE)
+        val editor = sharedPreferences.edit()
+        editor.apply {
+            putString("STRING_KEY", savetext)
+            putString("STRING_SCORE", savescore)
+        }.apply()
+
+    }
+
+
+
+
+
+
+
 
 
 

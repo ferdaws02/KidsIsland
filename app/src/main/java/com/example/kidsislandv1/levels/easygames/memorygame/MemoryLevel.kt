@@ -20,7 +20,7 @@ class MemoryLevel : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_memory_level)
-        loadData()
+
         var textid: TextView = findViewById(R.id.idtextplayer)
         var textscore: TextView = findViewById(R.id.idtextscore)
         dataBase_easygames = PlayerDataBase_easygames.getDatabase(this)
@@ -29,13 +29,13 @@ class MemoryLevel : AppCompatActivity() {
         textid.setText(playernamememorygameActivity)
         textscore.setText(dataBase_easygames.DAOplayer_easygames().getPlayerbyName(playernamememorygameActivity).toString())
         var buttonlevelopen1: ImageView = findViewById(R.id.idlevelopen1)
-
+        loadData()
         buttonlevelopen1.setOnClickListener {
 
             var soudClick = R.raw.sound_button
             AudioPlay.playAudioButton(this, soudClick)
             var intent = Intent(this, MemoryMainActivity::class.java)
-//            intent.putExtra("profileNameEasygames", playernamememorygameActivity)
+            intent.putExtra("profileNameEasygames", playernamememorygameActivity)
             finish()
             startActivity(intent)
 
@@ -89,16 +89,16 @@ class MemoryLevel : AppCompatActivity() {
     }
 
     private fun loadData() {
-        println("*********************DAL LIL LOAD PUZZEL***************")
+
+
         var textid: TextView = findViewById(R.id.idtextplayer)
         var textscore: TextView = findViewById(R.id.idtextscore)
-
-        val sharedPreferences = getSharedPreferences("sharedPrefs", Context.MODE_PRIVATE)
-        val savedString = sharedPreferences.getString("STRING_KEY", null)
-        val savedScore = sharedPreferences.getString("STRING_SCORE", null)
-        println("*********************IL TEXT MTA3IL NAME*************** " + savedString)
-        println("*********************IL TEXT MTA3IL SCORE*************** " + savedScore)
+        val sharedPreferences = getSharedPreferences( "sharedPrefs", Context.MODE_PRIVATE)
+        val savedString = sharedPreferences.getString( "STRING_KEY",  null)
+        val savedScore= sharedPreferences.getString( "STRING_SCORE",  null)
         textid.setText(savedString.toString())
         textscore.setText(savedScore.toString())
+
     }
+
 }
