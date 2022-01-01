@@ -7,28 +7,58 @@
     android:background="@drawable/playbg2"
     tools:context=".levels.easygames.Easygames">
 
+    <ImageView
+        android:id="@+id/idbtnselectavatar"
+        android:layout_width="74dp"
+        android:layout_height="71dp"
+
+
+        android:layout_marginTop="4dp"
+        app:layout_constraintBottom_toTopOf="@+id/horizontalScrollView"
+        app:layout_constraintEnd_toStartOf="@+id/idtextplayer"
+        app:layout_constraintHorizontal_bias="0.03"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/avatar2" />
+
     <TextView
         android:id="@+id/idtextplayer"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
         android:text="idplayer"
-        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="@+id/idtextscore"
         app:layout_constraintEnd_toStartOf="@+id/idtextscore"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="@+id/idtextscore" />
+
+
+    <ImageView
+        android:id="@+id/imageView7"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+
+
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintBottom_toBottomOf="@+id/idbtnselectavatar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.387"
+        app:srcCompat="@drawable/coin" />
 
     <TextView
         android:id="@+id/idtextscore"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="score"
-        android:textSize="30sp"
         android:layout_margin="10dp"
 
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-
+        android:text="0"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView7"
+        app:layout_constraintEnd_toStartOf="@+id/imageView7"
+        app:layout_constraintTop_toTopOf="@+id/imageView7" />
+     " />
 
     <HorizontalScrollView
 
@@ -123,5 +153,16 @@
 
     </HorizontalScrollView>
 
-
+    <ImageView
+        android:id="@+id/back"
+        android:layout_width="58dp"
+        android:layout_height="46dp"
+        android:layout_marginBottom="4dp"
+        android:src="@drawable/arrow"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.025"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/horizontalScrollView"
+        app:layout_constraintVertical_bias="0.75" />
 </androidx.constraintlayout.widget.ConstraintLayout>
