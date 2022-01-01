@@ -46,27 +46,6 @@
     </RelativeLayout>
 
 
-    <TextView
-        android:id="@+id/idtextplayerpuzzel"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="10dp"
-        android:text="idplayer"
-        android:textSize="30sp"
-        app:layout_constraintEnd_toStartOf="@+id/idtextscorepuzzel"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/idtextscorepuzzel"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="score"
-        android:textSize="30sp"
-        android:layout_margin="10dp"
-
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
 
 
 

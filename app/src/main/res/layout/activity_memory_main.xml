@@ -7,27 +7,6 @@
     android:background="@drawable/img_1"
     tools:context=".levels.easygames.memorygame.MemoryMainActivity">
 
-    <TextView
-        android:id="@+id/idtextplayermemory"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="10dp"
-        android:text="idplayer"
-        android:textSize="30sp"
-
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/idtextscorememory"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="score"
-        android:textSize="30sp"
-        android:layout_margin="10dp"
-
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
 
     <com.google.android.material.circularreveal.CircularRevealGridLayout

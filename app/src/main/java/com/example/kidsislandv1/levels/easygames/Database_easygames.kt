@@ -9,6 +9,7 @@ import com.example.kidsislandv1.R
 
 class Database_easygames : AppCompatActivity() {
 
+
     lateinit var recylcerPlayer: RecyclerView
     lateinit var recylcerPlayerAdapter: PlayerAdapter_easygames
     lateinit var Playerlist_easygames: MutableList<Player_easygames>

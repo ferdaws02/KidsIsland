@@ -3,7 +3,6 @@ package com.example.kidsislandv1.levels.easygames
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey
-import com.example.kidsislandv1.R
 
 @Entity(tableName = "Player")
 

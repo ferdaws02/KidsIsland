@@ -1,6 +1,7 @@
 package com.example.kidsislandv1.levels.easygames.puzzelgame
 
 import android.Manifest
+import android.content.Context
 import android.content.Intent
 import android.content.pm.PackageManager
 import android.media.MediaPlayer
@@ -18,28 +19,48 @@ import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import androidx.core.content.FileProvider
 import com.example.kidsislandv1.R
+import com.example.kidsislandv1.levels.easygames.Database_easygames
 import com.example.kidsislandv1.levels.easygames.Easygames
+import com.example.kidsislandv1.levels.easygames.PlayerDataBase_easygames
 import com.example.kidsislandv1.levels.easygames.memorygame.MemoryLevel
+import kotlinx.android.synthetic.main.activity_memory_level.*
 import java.io.File
 import java.io.IOException
 import java.text.SimpleDateFormat
 import java.util.*
 
 class MainpuzzelActivity : AppCompatActivity() {
+
+    lateinit var dataBase_easygames : PlayerDataBase_easygames
+
     var mCurrentPhotoPath: String? = null
     var mMediaPlayer: MediaPlayer? = null
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_mainpuzzel)
 
 
-        var textid: TextView = findViewById(R.id.idtextplayer)
-        var textscore: TextView = findViewById(R.id.idtextscore)
+       var textidpm: TextView = findViewById(R.id.idtextplayerpm)
+        var textscorepm: TextView = findViewById(R.id.idtextscorepm)
 
-        val playernameMainpuzzelActivity = intent.getStringExtra("profileNameEasygames")
-        textid.setText(playernameMainpuzzelActivity)
+
+        val sharedPreferences = getSharedPreferences( "sharedPrefs", Context.MODE_PRIVATE)
+        val savedString = sharedPreferences.getString( "STRING_KEY",  null)
+        val playernameMainpuzzelActivity= savedString.toString()
+
+
+        dataBase_easygames = PlayerDataBase_easygames.getDatabase(this)
+        val score =dataBase_easygames.DAOplayer_easygames().getPlayerbyName(playernameMainpuzzelActivity)
+        textscorepm.setText(score.toString())
+
 
         playSound()
+        loadData()
+
+
+
 
 
         val am = assets
@@ -56,7 +77,7 @@ class MainpuzzelActivity : AppCompatActivity() {
                         adapterView, view, i, l ->
                     val intent = Intent(applicationContext, puzzelActivity::class.java)
                     intent.putExtra("assetName", files!![i % files.size])
-                    intent.putExtra("profilnameverspuzzelA", playernameMainpuzzelActivity)
+
                     finish()
                     startActivity(intent)
                 }
@@ -214,6 +235,24 @@ class MainpuzzelActivity : AppCompatActivity() {
         startActivity(intent)
 
     }
+
+    private fun loadData() {
+
+
+        var textidpm: TextView = findViewById(R.id.idtextplayerpm)
+        val sharedPreferences = getSharedPreferences( "sharedPrefs", Context.MODE_PRIVATE)
+        val savedString = sharedPreferences.getString( "STRING_KEY",  null)
+
+
+        textidpm.setText(savedString.toString())
+
+
+    }
+
+
+
+
+
 
 
 

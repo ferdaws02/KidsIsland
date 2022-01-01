@@ -9,6 +9,8 @@ import androidx.room.Query
 
 @Dao
 interface playerDAo_easygames {
+
+
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     fun insert(Player_easygames : Player_easygames)
     @Query("UPDATE Player Set score=:nscore where pid=:npid")
@@ -24,10 +26,10 @@ interface playerDAo_easygames {
     fun searchByName (name:String): Boolean
 
 
-    @Query("SELECT score FROM Player where name=:name")
+    @Query("SELECT score FROM Player where name LIKE '%' || :name || '%'")
     fun getPlayerbyName(name: String): Int
 
-    @Query("SELECT diamond FROM Player where name=:name")
+    @Query("SELECT diamond FROM Player where name LIKE '%' || :name || '%'")
     fun getPlayerdiamondbyName(name: String): Int
 
 
