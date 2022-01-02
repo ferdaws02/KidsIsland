@@ -111,14 +111,39 @@ class play : AppCompatActivity() {
 
          bntsetting.setOnClickListener {
 
+//             AudioPlay.playAudioButton(this, soudClick)
+//
+//             val view = View.inflate(this@play, R.layout.settings_layout_dialog, null)
+//
+//             val builder = AlertDialog.Builder(this@play)
+//             builder.setView(view)
+//
+//           //  AudioPlay.continuePlaying(this, musicHome)
+//
+//             val dialog = builder.create()
+//             dialog.show()
+//             dialog.window?.setBackgroundDrawableResource(android.R.color.transparent)
+//             dialog.setCancelable(false)
+//
+//
+//             view.buttonidcancelsetting.setOnClickListener{
+//                 AudioPlay.playAudioButton(this, soudClick)
+//                 dialog.dismiss()}
+//
+//
+//             view.idOksetting.setOnClickListener{
+//                 AudioPlay.playAudioButton(this, soudClick)
+//
+//
+//             }
              AudioPlay.playAudioButton(this, soudClick)
 
-             val view = View.inflate(this@play, R.layout.settings_layout_dialog, null)
+
+
+             val view = View.inflate(this@play, R.layout.coming_soon_dialog, null)
 
              val builder = AlertDialog.Builder(this@play)
              builder.setView(view)
-
-           //  AudioPlay.continuePlaying(this, musicHome)
 
              val dialog = builder.create()
              dialog.show()
@@ -126,28 +151,22 @@ class play : AppCompatActivity() {
              dialog.setCancelable(false)
 
 
-             view.buttonidcancelsetting.setOnClickListener{
+             view.buttonidcancelcoming.setOnClickListener{
                  AudioPlay.playAudioButton(this, soudClick)
+                 // AudioPlay.continuePlaying(this, musicHome )
                  dialog.dismiss()}
-
-
-             view.idOksetting.setOnClickListener{
-                 AudioPlay.playAudioButton(this, soudClick)
-
-
-             }
 
         }
 
          bntshop.setOnClickListener {
              AudioPlay.playAudioButton(this, soudClick)
 
-             val view = View.inflate(this@play, R.layout.win_diamond_layout_dialog, null)
+
+
+             val view = View.inflate(this@play, R.layout.coming_soon_dialog, null)
 
              val builder = AlertDialog.Builder(this@play)
              builder.setView(view)
-
-             //  AudioPlay.continuePlaying(this, musicHome)
 
              val dialog = builder.create()
              dialog.show()
@@ -155,8 +174,9 @@ class play : AppCompatActivity() {
              dialog.setCancelable(false)
 
 
-             view.buttonidcancelloserink.setOnClickListener{
+             view.buttonidcancelcoming.setOnClickListener{
                  AudioPlay.playAudioButton(this, soudClick)
+                 // AudioPlay.continuePlaying(this, musicHome )
                  dialog.dismiss()}
 
 

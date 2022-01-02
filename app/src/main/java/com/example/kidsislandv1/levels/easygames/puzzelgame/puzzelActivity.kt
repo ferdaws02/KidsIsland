@@ -384,7 +384,7 @@ class puzzelActivity : AppCompatActivity() {
 
                     var diamondactueldeplayer1 = dataBase_easygames.DAOplayer_easygames().getPlayerdiamondbyName(textidfromintent.toString())
                     var newdiamondPlayer1 =  diamondactueldeplayer1 + 1
-                    dataBase_easygames.DAOplayer_easygames().updatediamond(newdiamondPlayer1.toString(),1)
+                    dataBase_easygames.DAOplayer_easygames().updatediamond(newdiamondPlayer1.toString(),textidfromintent.toString())
 
 
                     val view = View.inflate(this@puzzelActivity, R.layout.win_diamond_layout_dialog, null)

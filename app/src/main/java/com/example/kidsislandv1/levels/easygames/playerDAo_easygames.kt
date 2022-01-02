@@ -16,8 +16,8 @@ interface playerDAo_easygames {
     @Query("UPDATE Player Set score=:nscore where pid=:npid")
     fun update(nscore:String,npid:Int)
 
-    @Query("UPDATE Player Set diamond=:ndiamond where pid=:npid")
-    fun updatediamond(ndiamond :String,npid:Int)
+    @Query("UPDATE Player Set diamond=:ndiamond where name=:name")
+    fun updatediamond(ndiamond :String,name:String)
 
 
     @Query("SELECT * FROM Player order by score desc ")

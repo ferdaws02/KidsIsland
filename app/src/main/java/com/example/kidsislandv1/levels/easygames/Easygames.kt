@@ -38,7 +38,9 @@ class Easygames : AppCompatActivity() {
         val intro :ImageView =findViewById(R.id.puzzelin)
         val memory :ImageView =findViewById(R.id.memory)
 
-        loadData()
+//        val toolbar: Toolbar = findViewById(R.id.app_bar)
+//        setSupportActionBar(toolbar)
+     loadData()
 back.setOnClickListener { onBackPressed () }
 
         val sharedPreferences = getSharedPreferences( "sharedPrefs", Context.MODE_PRIVATE)
@@ -88,13 +90,13 @@ back.setOnClickListener { onBackPressed () }
 
     private fun loadData() {
 
-       var textid: TextView = findViewById(R.id.idtextplayer)
+       var textid: TextView = findViewById(R.id.idtextdiamond)
       var textscore: TextView = findViewById(R.id.idtextscore)
         val sharedPreferences = getSharedPreferences( "sharedPrefs", Context.MODE_PRIVATE)
         val savedString = sharedPreferences.getString( "STRING_KEY",  null)
         val savedScore = sharedPreferences.getString( "STRING_KEYSCORE",  null)
 
-        textid.setText(savedString)
+        textid.setText(diamondbyname(savedString.toString()))
         textscore.setText(scorebyname (savedString.toString()))
 
     }
@@ -106,7 +108,13 @@ back.setOnClickListener { onBackPressed () }
         return score
     }
 
+    fun diamondbyname (name:String) : String {
+        Database_easygames = PlayerDataBase_easygames.getDatabase(this)
+        var diamond = Database_easygames.DAOplayer_easygames().getPlayerdiamondbyName(name).toString()
 
+        println("**********************diamond***********" +diamond)
+        return diamond
+    }
 
 
 }

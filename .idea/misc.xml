@@ -74,9 +74,14 @@
         <entry key="..\:/Users/laamouri ferdaws/OneDrive/Bureau/miniprojet android/kidsIslandV1/app/src/main/res/drawable/background_border.xml" value="0.11614583333333334" />
         <entry key="..\:/Users/laamouri ferdaws/OneDrive/Bureau/miniprojet android/kidsIslandV1/app/src/main/res/drawable/gradiant_overlay.xml" value="0.11614583333333334" />
         <entry key="..\:/Users/laamouri ferdaws/OneDrive/Bureau/miniprojet android/kidsIslandV1/app/src/main/res/drawable/ic_launcher_background.xml" value="0.11614583333333334" />
-        <entry key="..\:/Users/laamouri ferdaws/OneDrive/Bureau/miniprojet android/kidsIslandV1/app/src/main/res/layout/activity_easygames.xml" value="0.25" />
+        <entry key="..\:/Users/laamouri ferdaws/OneDrive/Bureau/miniprojet android/kidsIslandV1/app/src/main/res/layout/activity_easygames.xml" value="0.22" />
         <entry key="..\:/Users/laamouri ferdaws/OneDrive/Bureau/miniprojet android/kidsIslandV1/app/src/main/res/layout/activity_play.xml" value="0.209375" />
-        <entry key="..\:/Users/laamouri ferdaws/OneDrive/Bureau/miniprojet android/kidsIslandV1/app/src/main/res/layout/toolbar.xml" value="0.21713954834973942" />
+        <entry key="..\:/Users/laamouri ferdaws/OneDrive/Bureau/miniprojet android/kidsIslandV1/app/src/main/res/layout/grid_element.xml" value="0.18611111111111112" />
+        <entry key="..\:/Users/laamouri ferdaws/OneDrive/Bureau/miniprojet android/kidsIslandV1/app/src/main/res/layout/lose_layout_dialog_easygames.xml" value="0.67" />
+        <entry key="..\:/Users/laamouri ferdaws/OneDrive/Bureau/miniprojet android/kidsIslandV1/app/src/main/res/layout/player_item_easygames.xml" value="0.18611111111111112" />
+        <entry key="..\:/Users/laamouri ferdaws/OneDrive/Bureau/miniprojet android/kidsIslandV1/app/src/main/res/layout/toolbar.xml" value="0.1" />
+        <entry key="..\:/Users/laamouri ferdaws/OneDrive/Bureau/miniprojet android/kidsIslandV1/app/src/main/res/layout/win_diamond_layout_dialog.xml" value="0.18611111111111112" />
+        <entry key="..\:/Users/laamouri ferdaws/OneDrive/Bureau/miniprojet android/kidsIslandV1/app/src/main/res/layout/win_layout_dialog.xml" value="0.18611111111111112" />
         <entry key="..\:/Users/laamouri ferdaws/OneDrive/Bureau/miniprojet android/kidsIslandV13/kidsIslandV1/app/src/main/res/drawable-v24/gradien_bg.xml" value="0.20462962962962963" />
         <entry key="..\:/Users/laamouri ferdaws/OneDrive/Bureau/miniprojet android/kidsIslandV13/kidsIslandV1/app/src/main/res/layout/activity_about_app_en.xml" value="0.10052083333333334" />
         <entry key="..\:/Users/laamouri ferdaws/OneDrive/Bureau/miniprojet android/kidsIslandV13/kidsIslandV1/app/src/main/res/layout/activity_easygames.xml" value="0.209375" />
