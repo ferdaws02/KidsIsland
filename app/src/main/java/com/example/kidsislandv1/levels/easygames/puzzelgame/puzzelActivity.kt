@@ -16,6 +16,7 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import com.example.kidsislandv1.R
+import com.example.kidsislandv1.aboutAppEn
 import com.example.kidsislandv1.levels.easygames.*
 import kotlinx.android.synthetic.main.activity_memory_level.*
 import kotlinx.android.synthetic.main.player_item_easygames.*
@@ -52,7 +53,8 @@ class puzzelActivity : AppCompatActivity() {
 
         playSound()
 
-
+back.setOnClickListener { finish()
+    startActivity(Intent(this, MainpuzzelActivity::class.java)) }
 
 
         val layout = findViewById<RelativeLayout>(R.id.layout)

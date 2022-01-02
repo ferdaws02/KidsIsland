@@ -60,6 +60,7 @@ class MainpuzzelActivity : AppCompatActivity() {
         loadData()
 
 
+        back.setOnClickListener { onBackPressed()}
 
 
 

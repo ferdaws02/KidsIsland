@@ -12,6 +12,7 @@ import android.widget.TextView
 import androidx.appcompat.app.AlertDialog
 import com.example.kidsislandv1.R
 import com.example.kidsislandv1.R.drawable.*
+import com.example.kidsislandv1.aboutAppEn
 import com.example.kidsislandv1.levels.easygames.*
 import kotlinx.android.synthetic.main.activity_memory_level.*
 import kotlinx.android.synthetic.main.win_diamond_layout_dialog.view.*
@@ -49,6 +50,9 @@ class MemoryMainActivity : AppCompatActivity() {
 
 
         playSound()
+
+        back.setOnClickListener {  finish()
+            startActivity(Intent(this, MemoryLevel::class.java)) }
 
 
         val images: MutableList<Int> =

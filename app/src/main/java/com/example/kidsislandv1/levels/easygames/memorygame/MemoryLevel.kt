@@ -10,6 +10,7 @@ import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
 import com.example.kidsislandv1.R
+import com.example.kidsislandv1.aboutAppEn
 import com.example.kidsislandv1.levels.easygames.*
 import kotlinx.android.synthetic.main.activity_memory_level.*
 
@@ -50,6 +51,9 @@ class MemoryLevel : AppCompatActivity() {
         loadData()
 
 
+
+
+     back.setOnClickListener { onBackPressed()}
         buttonlevelopen1.setOnClickListener {
 
             var soudClick = R.raw.sound_button
