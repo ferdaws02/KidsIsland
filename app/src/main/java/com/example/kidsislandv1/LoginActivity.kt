@@ -1,10 +1,15 @@
 package com.example.kidsislandv1
 
+import android.content.Context
 import android.content.Intent
+import android.content.SharedPreferences
 import android.media.MediaPlayer
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.widget.Toast
+import com.example.kidsislandv1.database.ApiInterface
+import com.example.kidsislandv1.database.User
 import com.google.android.gms.auth.api.signin.GoogleSignIn
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount
 import com.google.android.gms.auth.api.signin.GoogleSignInClient
@@ -12,14 +17,27 @@ import com.google.android.gms.auth.api.signin.GoogleSignInOptions
 import com.google.android.gms.common.api.ApiException
 import com.google.android.gms.tasks.Task
 import kotlinx.android.synthetic.main.activity_login.*
+import retrofit2.Call
+import retrofit2.Callback
+import retrofit2.Response
 
 class LoginActivity : AppCompatActivity() {
+
+
+
+
+    lateinit var sharedPreferences: SharedPreferences
+    var isRemembered2 = false
+
+
+
     lateinit var mGoogleSignInClient: GoogleSignInClient
     private val RC_SIGN_IN = 9001
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
+
         val gso = GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
             .requestIdToken("639193427799-peiooalrhevuvhtn4t4ke4d6lp0qkvq5.apps.googleusercontent.com")
             .requestEmail()
@@ -27,7 +45,50 @@ class LoginActivity : AppCompatActivity() {
 
         mGoogleSignInClient = GoogleSignIn.getClient(this, gso)
 
-        sign_in_button.setOnClickListener {
+
+
+
+
+
+
+        sharedPreferences = getSharedPreferences("SHARED_PREF", Context.MODE_PRIVATE)
+
+        isRemembered2=sharedPreferences.getBoolean("CHECKBOX2",false)
+
+        if (isRemembered2){
+            val intent = Intent(this,age::class.java)
+            startActivity(intent)
+            finish()
+        }
+    //    button.setOnClickListener{
+
+//            val name: String = editTextTextPersonName.text.toString()
+//            val age: Int = editTextTextPersonName2.text.toString().toInt()
+
+            // val checked: Boolean = checkBox.isChecked
+
+
+      //  }
+    //}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    sign_in_button.setOnClickListener {
             println("FIL CLICK LISTENER********")
             var mediaPlayer = MediaPlayer.create(this, R.raw.sound_button)
             mediaPlayer?.start()
@@ -81,6 +142,29 @@ class LoginActivity : AppCompatActivity() {
             val googleIdToken = account?.idToken ?: ""
             Log.i("Google ID Token", googleIdToken)
 
+            val apiInterface = ApiInterface.create()
+            val map: HashMap<String, String> = HashMap()
+            map["email"]=googleEmail
+            map["id"]=googleId
+
+            apiInterface.seConnecter(map).enqueue (object : Callback<User> {
+
+                override fun onResponse(call: Call<User>, response:
+                Response<User>
+                ) {
+                    Log.e("Login Successfut", map.toString())
+                    val user = response.body()
+                    Toast.makeText(this@LoginActivity, "Login Success", Toast.LENGTH_SHORT)
+                        .show()
+
+//                    val intent = Intent(this@LoginActivity, SampleResult::class.java)
+//                    startActivity(intent)
+                }
+                override fun onFailure(call: Call<User>, t: Throwable) {
+                    Log.e("Error", t.message.toString())
+                    Toast.makeText(this@LoginActivity, "User not found", Toast.LENGTH_SHORT).show()
+                }
+            })
         } catch (e: ApiException) {
             println("FIL HANDLE CATCH********")
             // Sign in was unsuccessful
@@ -88,9 +172,32 @@ class LoginActivity : AppCompatActivity() {
                 "failed code=", e.statusCode.toString()
             )
         }
-        println("5RAJ MIL HANDLE********")
+
+
+
+        val editor: SharedPreferences.Editor = sharedPreferences. edit()
+//            editor.putString("NAME", name)
+//            editor.putInt("AGE", age)
+        editor.putBoolean("CHECKBOX2", true)
+        editor.apply()
+
+
+        val intent = Intent(this,age::class.java)
+        startActivity(intent)
         finish()
-        startActivity(Intent(this,age::class.java))
+
+
+
+
+
+
+
+
+
+//
+//        println("5RAJ MIL HANDLE********")
+//        finish()
+//        startActivity(Intent(this,age::class.java))
     }
 
 
