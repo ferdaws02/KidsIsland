@@ -51,6 +51,7 @@ class puzzelActivity : AppCompatActivity() {
 
 
 
+
         playSound()
 
 back.setOnClickListener { finish()
@@ -63,7 +64,6 @@ back.setOnClickListener { finish()
         val assetName = intent.getStringExtra("assetName")
         mCurrentPhotoPath = intent.getStringExtra("mCurrentPhotoPath")
         mCurrentPhotoUri = intent.getStringExtra("mCurrentPhotoUri")
-
 
 
 

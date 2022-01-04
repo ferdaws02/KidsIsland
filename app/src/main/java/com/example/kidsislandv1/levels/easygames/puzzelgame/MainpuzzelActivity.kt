@@ -56,6 +56,7 @@ class MainpuzzelActivity : AppCompatActivity() {
         textscorepm.setText(score.toString())
 
 
+
         playSound()
         loadData()
 
@@ -243,11 +244,12 @@ class MainpuzzelActivity : AppCompatActivity() {
         var textidpm: TextView = findViewById(R.id.idtextplayerpm)
         val sharedPreferences = getSharedPreferences( "sharedPrefs", Context.MODE_PRIVATE)
         val savedString = sharedPreferences.getString( "STRING_KEY",  null)
+        if(textidpm.text==null){textidpm.setText("avatar6")}
+        else {
 
+            textidpm.setText(savedString.toString())
 
-        textidpm.setText(savedString.toString())
-
-
+        }
     }
 
 

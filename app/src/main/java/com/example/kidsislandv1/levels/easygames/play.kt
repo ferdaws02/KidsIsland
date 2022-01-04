@@ -2,6 +2,7 @@ package com.example.kidsislandv1.levels.easygames
 
 import android.content.Context
 import android.content.Intent
+import android.content.SharedPreferences
 import android.media.MediaPlayer
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -9,6 +10,7 @@ import android.view.View
 import android.widget.ImageButton
 import android.widget.ImageView
 import android.widget.TextView
+import android.window.SplashScreen
 import androidx.appcompat.app.AlertDialog
 import androidx.recyclerview.widget.RecyclerView
 
@@ -19,10 +21,14 @@ import kotlinx.android.synthetic.main.rink_layout_dialog.view.*
 
 
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.kidsislandv1.MainActivity
 import com.example.kidsislandv1.R
+import com.example.kidsislandv1.SplashScreenActivity
 import kotlinx.android.synthetic.main.activity_play.*
 import kotlinx.android.synthetic.main.settings_layout_dialog.*
 import kotlinx.android.synthetic.main.settings_layout_dialog.view.*
+import java.util.*
+import kotlin.collections.ArrayList
 
 const val PREF_NAME = "LOGIN_PREF"
 const val IMAGE = "IMAGE"
@@ -37,7 +43,8 @@ class play : AppCompatActivity() {
     lateinit var scorehome :TextView
     lateinit var diamondhome :TextView
 
-
+   // lateinit var preferences:SharedPreferences
+    lateinit var preferences1:SharedPreferences
 
 
     lateinit var bntdatabase : ImageView
@@ -59,57 +66,57 @@ class play : AppCompatActivity() {
 
 
         var soudClick = R.raw.sound_button
-        var musicHome =  R.raw.sound_home_jumping_around
+        var musicHome = R.raw.sound_home_jumping_around
 
 
 
         Database_easygames = PlayerDataBase_easygames.getDatabase(this)
-        playerList_easygames=ArrayList()
+        playerList_easygames = ArrayList()
         PlayerAdapter = PlayerAdapter_easygames(playerList_easygames)
 
         bntdatabase = findViewById(R.id.databasebnt)
 
 
-        bntsplit  = findViewById(R.id.idimagespin)
-        bntshop  = findViewById(R.id.idimageshop)
+        bntsplit = findViewById(R.id.idimagespin)
+        bntshop = findViewById(R.id.idimageshop)
         bntgift = findViewById(R.id.idimagegift)
         bntsetting = findViewById(R.id.idbuttonsetting)
-        scorehome  = findViewById(R.id.idtextViewscorehome)
-        diamondhome= findViewById(R.id.idtextViewdiamondhome)
+        scorehome = findViewById(R.id.idtextViewscorehome)
+        diamondhome = findViewById(R.id.idtextViewdiamondhome)
 
-
-
-        loadData ()
+       // preferences = getSharedPreferences("Settings", Context.MODE_PRIVATE)
+        preferences1 = getSharedPreferences("SHARED_PREF", Context.MODE_PRIVATE)
+        loadData()
 
         playSound()
 
+//        Locale.getDefault().getDisplayLanguage()
+
+        bntsplit.setOnClickListener {
+
+            AudioPlay.playAudioButton(this, soudClick)
 
 
-         bntsplit.setOnClickListener {
+            val view = View.inflate(this@play, R.layout.coming_soon_dialog, null)
 
-             AudioPlay.playAudioButton(this, soudClick)
+            val builder = AlertDialog.Builder(this@play)
+            builder.setView(view)
 
-
-
-             val view = View.inflate(this@play, R.layout.coming_soon_dialog, null)
-
-             val builder = AlertDialog.Builder(this@play)
-             builder.setView(view)
-
-             val dialog = builder.create()
-             dialog.show()
-             dialog.window?.setBackgroundDrawableResource(android.R.color.transparent)
-             dialog.setCancelable(false)
+            val dialog = builder.create()
+            dialog.show()
+            dialog.window?.setBackgroundDrawableResource(android.R.color.transparent)
+            dialog.setCancelable(false)
 
 
-             view.buttonidcancelcoming.setOnClickListener{
-                 AudioPlay.playAudioButton(this, soudClick)
+            view.buttonidcancelcoming.setOnClickListener {
+                AudioPlay.playAudioButton(this, soudClick)
                 // AudioPlay.continuePlaying(this, musicHome )
-                 dialog.dismiss()}
+                dialog.dismiss()
+            }
 
         }
 
-         bntsetting.setOnClickListener {
+        bntsetting.setOnClickListener {
 
 //             AudioPlay.playAudioButton(this, soudClick)
 //
@@ -136,54 +143,65 @@ class play : AppCompatActivity() {
 //
 //
 //             }
-             AudioPlay.playAudioButton(this, soudClick)
+            AudioPlay.playAudioButton(this, soudClick)
 
 
+            val view = View.inflate(this@play, R.layout.coming_soon_dialog, null)
 
-             val view = View.inflate(this@play, R.layout.coming_soon_dialog, null)
+            val builder = AlertDialog.Builder(this@play)
+            builder.setView(view)
 
-             val builder = AlertDialog.Builder(this@play)
-             builder.setView(view)
-
-             val dialog = builder.create()
-             dialog.show()
-             dialog.window?.setBackgroundDrawableResource(android.R.color.transparent)
-             dialog.setCancelable(false)
-
-
-             view.buttonidcancelcoming.setOnClickListener{
-                 AudioPlay.playAudioButton(this, soudClick)
-                 // AudioPlay.continuePlaying(this, musicHome )
-                 dialog.dismiss()}
-
-        }
-
-         bntshop.setOnClickListener {
-             AudioPlay.playAudioButton(this, soudClick)
+            val dialog = builder.create()
+            dialog.show()
+            dialog.window?.setBackgroundDrawableResource(android.R.color.transparent)
+            dialog.setCancelable(false)
 
 
-
-             val view = View.inflate(this@play, R.layout.coming_soon_dialog, null)
-
-             val builder = AlertDialog.Builder(this@play)
-             builder.setView(view)
-
-             val dialog = builder.create()
-             dialog.show()
-             dialog.window?.setBackgroundDrawableResource(android.R.color.transparent)
-             dialog.setCancelable(false)
-
-
-             view.buttonidcancelcoming.setOnClickListener{
-                 AudioPlay.playAudioButton(this, soudClick)
-                 // AudioPlay.continuePlaying(this, musicHome )
-                 dialog.dismiss()}
-
-
-
-
+            view.buttonidcancelcoming.setOnClickListener {
+                AudioPlay.playAudioButton(this, soudClick)
+                // AudioPlay.continuePlaying(this, musicHome )
+                dialog.dismiss()
+            }
 
         }
+
+        bntshop.setOnClickListener {
+            AudioPlay.playAudioButton(this, soudClick)
+
+
+            val view = View.inflate(this@play, R.layout.coming_soon_dialog, null)
+
+            val builder = AlertDialog.Builder(this@play)
+            builder.setView(view)
+
+            val dialog = builder.create()
+            dialog.show()
+            dialog.window?.setBackgroundDrawableResource(android.R.color.transparent)
+            dialog.setCancelable(false)
+
+
+            view.buttonidcancelcoming.setOnClickListener {
+                AudioPlay.playAudioButton(this, soudClick)
+                // AudioPlay.continuePlaying(this, musicHome )
+                dialog.dismiss()
+            }
+
+        }
+        signout.setOnClickListener {
+//            val editor: SharedPreferences.Editor = preferences.edit()
+//            editor.clear()
+//            editor.apply()
+            val editor1: SharedPreferences.Editor = preferences1.edit()
+            editor1.clear()
+            editor1.apply()
+
+            val intent = Intent(this, SplashScreenActivity::class.java)
+            startActivity(intent)
+            finish()
+        }
+
+
+
          bntgift.setOnClickListener {
              AudioPlay.playAudioButton(this, soudClick)
 

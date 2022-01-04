@@ -4,6 +4,14 @@
     <string name="chose_level">chose a level </string>
     <string name="text_button_continue">Continue</string>
     <!--    level english-->
+    <string name="AboutApp">About App</string>
+    <string name="AboutAppText"> An educational game application intended for children from 3 to 10 years old composed by 4
+types of games:
+1- memorization games
+2- reflex games
+3- language games (alphabets and words)
+4- math games (subtraction, addition and multiplication)
+</string>
     <string name="text_button_level_easy">Easy</string>
     <string name="text_button_level_medium">Medium</string>
     <string name="text_button_level_hard">Hard</string>

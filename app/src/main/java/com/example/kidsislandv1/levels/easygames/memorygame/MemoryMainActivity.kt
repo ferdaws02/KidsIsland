@@ -18,6 +18,8 @@ import kotlinx.android.synthetic.main.activity_memory_level.*
 import kotlinx.android.synthetic.main.win_diamond_layout_dialog.view.*
 
 import kotlinx.android.synthetic.main.win_layout_dialog.view.*
+import java.util.*
+import kotlin.collections.ArrayList
 
 class MemoryMainActivity : AppCompatActivity() {
 
@@ -53,7 +55,6 @@ class MemoryMainActivity : AppCompatActivity() {
 
         back.setOnClickListener {  finish()
             startActivity(Intent(this, MemoryLevel::class.java)) }
-
 
         val images: MutableList<Int> =
             mutableListOf(lion, giraffe,

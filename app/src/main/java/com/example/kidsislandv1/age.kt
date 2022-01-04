@@ -3,6 +3,7 @@ package com.example.kidsislandv1
 import android.content.Context
 import android.content.Intent
 import android.content.SharedPreferences
+import android.content.res.Configuration
 import android.media.MediaPlayer
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -10,6 +11,7 @@ import android.widget.ImageButton
 import com.example.kidsislandv1.levels.easygames.AudioPlay
 import com.example.kidsislandv1.levels.easygames.play
 import kotlinx.android.synthetic.main.activity_play.*
+import java.util.*
 
 class age : AppCompatActivity() {
 
@@ -62,7 +64,8 @@ class age : AppCompatActivity() {
             editor.putBoolean("CHECKBOX4", true)
             editor.apply()
 
-
+            setLocate("en")
+            recreate()
             val intent = Intent(this, play::class.java)
             startActivity(intent)
             finish()
@@ -70,12 +73,25 @@ class age : AppCompatActivity() {
 
         }
 
-
-//    override fun onBackPressed (){
-//        super.onBackPressed()
-//        var intent = Intent(this, aboutAppEn::class.java)
-//        startActivity(intent)
-//
-//    }
     }
-}
+   private fun setLocate(s: String) {
+        val locale = Locale(s)
+
+        Locale.setDefault(locale)
+
+        val config = Configuration()
+
+        config.locale = locale
+        baseContext.resources.updateConfiguration(config, baseContext.resources.displayMetrics)
+        sharedPreferences = getSharedPreferences("Settings", Context.MODE_PRIVATE)
+
+        val editor = sharedPreferences.edit()
+        editor.putString("My_Lang", s)
+        editor.putBoolean("CHECKBOX", true)
+        editor.apply()
+
+
+
+
+    }
+    }

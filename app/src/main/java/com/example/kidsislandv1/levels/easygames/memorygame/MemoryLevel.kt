@@ -120,8 +120,10 @@ class MemoryLevel : AppCompatActivity() {
             val savedScore = sharedPreferences.getString( "STRING_KEYSCORE",  null)
 
             idtextscore.setText(scorebyname (savedString.toString()))
-            idtextplayer.setText(savedString)
-
+            if(idtextplayer.text==null){idtextplayer.setText("avatar6")}
+            else {
+                idtextplayer.setText(savedString)
+            }
 
         }
 

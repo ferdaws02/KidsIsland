@@ -5,6 +5,14 @@
     <string name="chose_level">إختر مستوى </string>
     <string name="text_button_continue">استمر</string>
     <!--    les niveaux arabe-->
+    <string name="AboutApp">حول التطبيق</string>
+    <string name="AboutAppText">تطبيق لعبة تعليمية مخصص للأطفال من سن 3 إلى 10 سنوات مؤلف من 4
+أنواع الألعاب:
+1- ألعاب الحفظ
+2- ألعاب انعكاسية
+3- الألعاب اللغوية (الحروف الهجائية والكلمات)
+4- ألعاب الرياضيات (الطرح والجمع والضرب).
+</string>
     <string name="text_button_level_easy">سهل</string>
     <string name="text_button_level_medium">متوسط</string>
     <string name="text_button_level_hard">صعب</string>

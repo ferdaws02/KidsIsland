@@ -84,8 +84,8 @@ class MainActivity : AppCompatActivity() {
 
         config.locale = locale
         baseContext.resources.updateConfiguration(config, baseContext.resources.displayMetrics)
-        sharedPreferences = getSharedPreferences("Settings", Context.MODE_PRIVATE)
-        isRemembered=sharedPreferences.getBoolean("CHECKBOX",false)
+        sharedPreferences = getSharedPreferences("SHARED_PREF", Context.MODE_PRIVATE)
+        isRemembered=sharedPreferences.getBoolean("CHECKBOX6",false)
 
         if (isRemembered){
             val intent = Intent(this,aboutAppEn::class.java)
@@ -94,7 +94,7 @@ class MainActivity : AppCompatActivity() {
         }
         val editor = sharedPreferences.edit()
         editor.putString("My_Lang", s)
-        editor.putBoolean("CHECKBOX", true)
+        editor.putBoolean("CHECKBOX6", true)
         editor.apply()
 
 
@@ -102,7 +102,7 @@ class MainActivity : AppCompatActivity() {
 
     }
     private fun loadLocate() {
-        val sharedPreferences = getSharedPreferences("Settings", Activity.MODE_PRIVATE)
+        val sharedPreferences = getSharedPreferences("SHARED_PREF", Activity.MODE_PRIVATE)
         val language = sharedPreferences.getString("My_Lang", "")
         if (language != null) {
             setLocate(language)

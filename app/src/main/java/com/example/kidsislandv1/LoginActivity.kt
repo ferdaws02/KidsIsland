@@ -146,7 +146,7 @@ class LoginActivity : AppCompatActivity() {
             val map: HashMap<String, String> = HashMap()
             map["email"]=googleEmail
             map["id"]=googleId
-
+//Node js bidaya ************************************
             apiInterface.seConnecter(map).enqueue (object : Callback<User> {
 
                 override fun onResponse(call: Call<User>, response:
@@ -165,6 +165,7 @@ class LoginActivity : AppCompatActivity() {
                     Toast.makeText(this@LoginActivity, "User not found", Toast.LENGTH_SHORT).show()
                 }
             })
+            //Node js nihaya *************************
         } catch (e: ApiException) {
             println("FIL HANDLE CATCH********")
             // Sign in was unsuccessful

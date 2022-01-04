@@ -4,6 +4,14 @@
     <string name="chose_level">choisir un niveau </string>
     <string name="text_button_continue">Continue</string>
     <!--    les niveaux français-->
+    <string name="AboutApp">a propos</string>
+    <string name="AboutAppText">Une application de jeu éducatif destinée aux enfants de 3 à10 ans composés par 4
+types de jeux :
+1- des jeux de mémorisation
+2- des jeux de réflexe
+3- des jeux de langue (alphabètes et mots)
+4- des jeux de mathématiques (soustraction, addition et multiplication)
+</string>
     <string name="text_button_level_easy">Facile</string>
     <string name="text_button_level_medium">Moyenne</string>
     <string name="text_button_level_hard">Difficile</string>

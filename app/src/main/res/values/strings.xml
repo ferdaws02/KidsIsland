@@ -2,9 +2,17 @@
 <resources>
     <string name="app_name">KidsIsland</string>
     <string name="chose_level">chose a level </string>
-    <string name="text_button_language">English</string>
+
     <string name="text_button_continue">Continue</string>
     <!--    level english-->
+    <string name="AboutApp">About App</string>
+    <string name="AboutAppText">Une application de jeu éducatif destinée aux enfants de 3 à10 ans composés par 4
+types de jeux :
+1- des jeux de mémorisation
+2- des jeux de réflexe
+3- des jeux de langue (alphabètes et mots)
+4- des jeux de mathématiques (soustraction, addition et multiplication)
+</string>
     <string name="text_button_level_easy">Easy</string>
     <string name="text_button_level_medium">Medium</string>
     <string name="text_button_level_hard">Hard</string>

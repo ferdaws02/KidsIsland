@@ -28,7 +28,7 @@
             android:layout_gravity="center"
             android:layout_marginBottom="10dp"
             android:shadowRadius="20"
-            android:text="About App"
+            android:text="@string/AboutApp"
             android:textColor="@color/black"
             android:textSize="40sp"
             />
